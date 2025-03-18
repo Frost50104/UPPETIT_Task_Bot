@@ -1527,8 +1527,9 @@ def handle_bot_users(message):
         for user_id in users:
             try:
                 user = bot.get_chat(user_id)
+                first_name = user.first_name or "Без имени"
                 username = f"@{user.username}" if user.username else f"ID: {user_id}"
-                user_list.append(f"👤 {username}")
+                user_list.append(f"👤 {first_name} ({username})")
             except telebot.apihelper.ApiTelegramException:
                 user_list.append(f"⚠ ID: {user_id} (не найден)")
 
