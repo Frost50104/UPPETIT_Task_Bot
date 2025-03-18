@@ -1054,6 +1054,9 @@ def process_delete_admin_choice(call):
             admin_list.append(display_text)
             keyboard.add(InlineKeyboardButton(display_text, callback_data=f"delete_admin_{admin_id}"))
 
+        # Добавляем кнопку "❌ Отмена"
+        keyboard.add(InlineKeyboardButton("❌ Отмена", callback_data="cancel_delete_admin"))
+
         if not admin_list:
             bot.send_message(call.message.chat.id, "⚠ Нет доступных администраторов для удаления.", parse_mode="HTML")
             return
