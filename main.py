@@ -1494,17 +1494,16 @@ def handle_command_admins(message: types.Message):
     for admin_id in config.ADMIN_ID:
         try:
             user = bot.get_chat(admin_id)
+            first_name = user.first_name or "Без имени"
             username = f"👤 @{user.username}" if user.username else f"ID: {admin_id}"
+            admin_list.append(f"👤 <b>{first_name}</b> ({username})")
         except telebot.apihelper.ApiTelegramException:
-            username = f"👤 ID: {admin_id} (❌ недоступен)"
-
-        # Экранируем username и ID перед отправкой
-        admin_list.append(escape_markdown_v2(username))
+            admin_list.append(f"👤 ID: {admin_id} (❌ недоступен)")
 
     bot.send_message(
         chat_id=message.chat.id,
-        text=f"🔹 *Список администраторов:*\n" + "\n".join(admin_list),
-        parse_mode="MarkdownV2"
+        text=f"🔹 <b>Список администраторов:</b>\n" + "\n".join(admin_list),
+        parse_mode="HTML"
     )
 
 
