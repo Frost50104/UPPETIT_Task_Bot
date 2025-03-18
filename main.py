@@ -388,6 +388,9 @@ def process_delete_user_choice(call):
     for index, group_name in group_index_map.items():
         keyboard.add(InlineKeyboardButton(group_name[:30], callback_data=f"delete_group_{index}"))
 
+    # Добавляем кнопку "❌ Отмена"
+    keyboard.add(InlineKeyboardButton("❌ Отмена", callback_data="cancel_delete_employee_group"))
+
     bot.edit_message_text(
         "Выберите группу, из которой нужно удалить сотрудника:",
         call.message.chat.id,
@@ -395,6 +398,10 @@ def process_delete_user_choice(call):
         reply_markup=keyboard
     )
 
+@bot.callback_query_handler(func=lambda call: call.data == "cancel_delete_employee_group")
+def cancel_delete_employee(call):
+    """Отменяет удаление сотрудника и завершает процесс."""
+    bot.edit_message_text("🚫 Удаление сотрудника отменено.", call.message.chat.id, call.message.message_id)
 
 @bot.callback_query_handler(func=lambda call: call.data.startswith("delete_group_"))
 def select_group_to_delete(call):
