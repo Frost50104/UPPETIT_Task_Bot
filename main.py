@@ -1621,13 +1621,13 @@ def receive_photo(message):
 
     # Попытаемся получить текст задачи для исполнителя; если нет — используем заглушку.
     task_text = task_data.get(user_id, {}).get("task_text", "_")
-    username = message.from_user.username or f"ID: {user_id}"
+    first_name = message.from_user.first_name or f"ID: {user_id}"
 
     # Отправляем фото в контрольный чат без inline-кнопок для получения ID сообщения
     sent_message = bot.send_photo(
         config.control_chat_id,
         photo,
-        caption=f"📝 <b>Задача:</b> {task_text}\n👤 <b>{username}</b>",
+        caption=f"📝 <b>Задача:</b> {task_text}\n👤 <b>{first_name}</b>",
         parse_mode="HTML"
     )
 
