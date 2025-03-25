@@ -335,9 +335,13 @@ def process_new_user_id(message):
     # Перезагружаем config.py
     importlib.reload(config)
 
+    # 🔁 Обновляем кэш пользователей
+    from users_cache import build_user_cache
+    build_user_cache()
+
     bot.send_message(
         chat_id,
-        f"✅ Пользователь с ID <b>{new_user_id}</b> добавлен в группу <b>{group_name}</b>!",
+        f"✅ Пользователь с ID <b>{new_user_id}</b> добавлен в группу <b>{group_name}</b>!\n\n🔄 Кэш пользователей обновлён.",
         parse_mode="HTML"
     )
 
@@ -875,47 +879,37 @@ def process_user_task_text(message):
 
 def send_employee_selection(chat_id):
     """Отправляет список сотрудников для выбора."""
-    importlib.reload(config)  # Обновляем данные
+    importlib.reload(config)
+
+    with open("user_cache.json", "r", encoding="utf-8") as f:
+        user_cache = json.load(f)
 
     selected_users = task_data[chat_id]["selected_users"]
+    keyboard = InlineKeyboardMarkup()
     available_users = []
 
-    keyboard = InlineKeyboardMarkup()
+    # 🔹 Добавим кнопку "❌ Отмена" в начало
+    keyboard.add(InlineKeyboardButton("❌ Отмена", callback_data=f"cancel_task|{chat_id}"))
+
     for group_name, users in config.performers.items():
         for user_id in users:
             if user_id in selected_users:
-                continue  # Пропускаем уже выбранных
-
-            try:
-                user = bot.get_chat(user_id)
-                username = f"@{user.username}" if user.username else "Без username"
-                first_name = user.first_name or "Без имени"
-                callback_data = f"select_employee|{chat_id}|{user_id}"
-                keyboard.add(InlineKeyboardButton(f"{first_name} ({username})", callback_data=callback_data))
-                available_users.append(f"👤 {first_name} ({username}) - {user_id}")
-            except telebot.apihelper.ApiTelegramException:
                 continue
 
-    # Если нет доступных пользователей, сразу предлагаем отправить задачу
+            cached = user_cache.get(str(user_id), {})
+            first_name = cached.get("first_name", "Без имени")
+            username = f"@{cached['username']}" if cached.get("username") else f"ID: {user_id}"
+
+            callback_data = f"select_employee|{chat_id}|{user_id}"
+            keyboard.add(InlineKeyboardButton(f"{first_name} ({username})", callback_data=callback_data))
+            available_users.append(user_id)
+
     if not available_users:
-        bot.send_message(
-            chat_id,
-            "Больше нет доступных сотрудников",
-            parse_mode="HTML"
-        )
+        bot.send_message(chat_id, "Больше нет доступных сотрудников", parse_mode="HTML")
         send_selected_users(chat_id)
         return
 
-    keyboard.add(
-        InlineKeyboardButton("❌ Отмена", callback_data=f"cancel_task|{chat_id}")
-    )
-
-    bot.send_message(
-        chat_id,
-        "Кому нужно поставить задачу?",
-        parse_mode="HTML",
-        reply_markup=keyboard
-    )
+    bot.send_message(chat_id, "Кому нужно поставить задачу?", parse_mode="HTML", reply_markup=keyboard)
 
 
 @bot.callback_query_handler(func=lambda call: call.data.startswith("select_employee"))
@@ -939,16 +933,15 @@ def select_employee(call):
 def send_selected_users(chat_id):
     """Отправляет сообщение с выбранными пользователями и возможностью добавить ещё или отправить."""
     selected_users = task_data[chat_id]["selected_users"]
-    selected_text = ""
+    with open("user_cache.json", "r", encoding="utf-8") as f:
+        user_cache = json.load(f)
 
+    selected_text = ""
     for user_id in selected_users:
-        try:
-            user = bot.get_chat(user_id)
-            username = f"(@{user.username})" if user.username else ""
-            first_name = user.first_name or "Без имени"
-            selected_text += f"✅ {first_name} {username} - <code>{user_id}</code>\n"
-        except telebot.apihelper.ApiTelegramException:
-            selected_text += f"✅ <code>{user_id}</code> (ошибка получения данных)\n"
+        cached = user_cache.get(str(user_id), {})
+        first_name = cached.get("first_name", "Без имени")
+        username = f"(@{cached['username']})" if cached.get("username") else f"(ID: {user_id})"
+        selected_text += f"✅ {first_name} {username} - <code>{user_id}</code>\n"
 
     keyboard = InlineKeyboardMarkup()
     keyboard.add(
