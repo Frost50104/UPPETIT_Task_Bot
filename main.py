@@ -10,6 +10,8 @@ import ast
 import re
 import hashlib
 import importlib
+import json
+from users_cache import build_user_cache
 
 from config import ADMIN_ID
 
@@ -1516,38 +1518,86 @@ def handle_command_admins(message: types.Message):
         parse_mode="HTML"
     )
 
+# ========= Обновление кэша списка пользователей для bot_users =========
+@bot.message_handler(commands=['update_user_cache'])
+def handle_update_user_cache(message):
+    if not is_admin(message.from_user.id):
+        bot.send_message(message.chat.id, "⛔ У вас нет прав обновлять кэш.")
+        return
+
+    try:
+        build_user_cache()
+        bot.send_message(message.chat.id, "✅ Кэш пользователей обновлён.")
+    except Exception as e:
+        bot.send_message(message.chat.id, f"⚠ Ошибка при обновлении кэша:\n<code>{e}</code>", parse_mode="HTML")
+
+
 
 @bot.message_handler(commands=['bot_users'])
 def handle_bot_users(message):
-
     if not is_admin(message.from_user.id):
         bot.send_message(message.chat.id, "⛔ У вас нет прав просматривать список пользователей.")
         return
 
+    # Шаг 1 — отправляем предварительное сообщение
+    loading_msg = bot.send_message(message.chat.id, "🔁 Обновляем данные пользователей...")
 
-    """Выводит актуальный список сотрудников по группам."""
+    try:
+        # Шаг 2 — обновляем кэш
+        from users_cache import build_user_cache
+        build_user_cache()
 
-    importlib.reload(config)  # Перезагружаем config.py
+        # Шаг 3 — читаем обновлённый кэш
+        with open("user_cache.json", "r", encoding="utf-8") as f:
+            user_cache = json.load(f)
 
-    response = []
+        importlib.reload(config)
 
-    for group_name, users in config.performers.items():
-        user_list = []
-        for user_id in users:
-            try:
-                user = bot.get_chat(user_id)
-                first_name = user.first_name or "Без имени"
-                username = f"@{user.username}" if user.username else f"ID: {user_id}"
-                user_list.append(f"👤 {first_name} ({username})")
-            except telebot.apihelper.ApiTelegramException:
-                user_list.append(f"⚠ ID: {user_id} (не найден)")
+        # Шаг 4 — формируем сообщение
+        response = []
 
-        if user_list:
-            response.append(f"<b>{group_name}</b>:\n" + "\n".join(user_list))
+        for group_name, users in config.performers.items():
+            user_list = []
+            for user_id in users:
+                uid = str(user_id)
+                cached = user_cache.get(uid)
+                if cached:
+                    first_name = cached.get("first_name") or "Без имени"
+                    username = f"@{cached['username']}" if cached.get("username") else f"ID: {uid}"
+                    user_list.append(f"👤 {first_name} ({username})")
+                else:
+                    user_list.append(f"⚠ ID: {uid} (не найден в кэше)")
+
+            if user_list:
+                response.append(f"<b>{group_name}</b>:\n" + "\n".join(user_list))
+            else:
+                response.append(f"<b>{group_name}</b>:\n 🔹 Нет сотрудников.")
+
+        # Шаг 5 — редактируем сообщение, если оно влезает
+        full_text = "\n\n".join(response)
+        max_length = 4096
+
+        if len(full_text) <= max_length:
+            bot.edit_message_text(full_text, message.chat.id, loading_msg.message_id, parse_mode="HTML")
         else:
-            response.append(f"<b>{group_name}</b>:\n 🔹 Нет сотрудников.")
+            # Если длинное — редактируем первое и продолжаем отправку в новых сообщениях
+            bot.edit_message_text("✅ Список пользователей получен.", message.chat.id, loading_msg.message_id)
 
-    bot.send_message(message.chat.id, "\n\n".join(response), parse_mode="HTML")
+            # Отправка по частям
+            while full_text:
+                part = full_text[:max_length]
+                split_index = part.rfind('\n\n')
+                if split_index == -1 or len(full_text) <= max_length:
+                    bot.send_message(message.chat.id, full_text, parse_mode="HTML")
+                    break
+                else:
+                    part = full_text[:split_index]
+                    bot.send_message(message.chat.id, part, parse_mode="HTML")
+                    full_text = full_text[split_index:].lstrip()
+
+    except Exception as e:
+        bot.edit_message_text(f"⚠ Ошибка при обновлении кэша:\n<code>{e}</code>", message.chat.id, loading_msg.message_id, parse_mode="HTML")
+
 
 @bot.message_handler(commands=['my_id'])
 def handle_command_my_id(message: types.Message):
