@@ -877,46 +877,80 @@ def process_user_task_text(message):
     send_employee_selection(message.chat.id)
 
 
-def send_employee_selection(chat_id):
-    """Отправляет список сотрудников для выбора."""
+def send_employee_selection(chat_id, group_index=0, message_id=None):
+    """Постранично отправляет список сотрудников по группам, редактируя сообщение."""
     importlib.reload(config)
 
     with open("user_cache.json", "r", encoding="utf-8") as f:
         user_cache = json.load(f)
 
     selected_users = task_data[chat_id]["selected_users"]
-    keyboard = InlineKeyboardMarkup()
-    available_users = []
+    group_names = list(config.performers.keys())
 
-    # 🔹 Добавим кнопку "❌ Отмена" в начало
+    if group_index < 0:
+        group_index = 0
+    elif group_index >= len(group_names):
+        group_index = len(group_names) - 1
+
+    current_group = group_names[group_index]
+    group_users = config.performers[current_group]
+
+    keyboard = InlineKeyboardMarkup()
+    available = 0
+
+    for user_id in group_users:
+        if user_id in selected_users:
+            continue
+
+        cached = user_cache.get(str(user_id), {})
+        first_name = cached.get("first_name", "Без имени")
+        username = f"@{cached['username']}" if cached.get("username") else f"ID: {user_id}"
+
+        callback_data = f"select_employee|{chat_id}|{user_id}|{group_index}"
+        keyboard.add(InlineKeyboardButton(f"{first_name} ({username})", callback_data=callback_data))
+        available += 1
+
+    # Навигация
+    nav_buttons = []
+    if group_index > 0:
+        nav_buttons.append(InlineKeyboardButton("⏮ Назад", callback_data=f"prev_group|{chat_id}|{group_index}"))
+    if group_index < len(group_names) - 1:
+        nav_buttons.append(InlineKeyboardButton("⏭ Вперёд", callback_data=f"next_group|{chat_id}|{group_index}"))
+    if nav_buttons:
+        keyboard.row(*nav_buttons)
+
     keyboard.add(InlineKeyboardButton("❌ Отмена", callback_data=f"cancel_task|{chat_id}"))
 
-    for group_name, users in config.performers.items():
-        for user_id in users:
-            if user_id in selected_users:
-                continue
+    message_text = f"<b>{current_group}</b>\nКому нужно поставить задачу?" if available else f"<b>{current_group}</b>\nНет доступных сотрудников."
 
-            cached = user_cache.get(str(user_id), {})
-            first_name = cached.get("first_name", "Без имени")
-            username = f"@{cached['username']}" if cached.get("username") else f"ID: {user_id}"
+    if message_id:
+        bot.edit_message_text(
+            message_text,
+            chat_id,
+            message_id,
+            parse_mode="HTML",
+            reply_markup=keyboard
+        )
+    else:
+        bot.send_message(chat_id, message_text, parse_mode="HTML", reply_markup=keyboard)
 
-            callback_data = f"select_employee|{chat_id}|{user_id}"
-            keyboard.add(InlineKeyboardButton(f"{first_name} ({username})", callback_data=callback_data))
-            available_users.append(user_id)
+    task_data[chat_id]["group_index"] = group_index
 
-    if not available_users:
-        bot.send_message(chat_id, "Больше нет доступных сотрудников", parse_mode="HTML")
-        send_selected_users(chat_id)
-        return
+@bot.callback_query_handler(func=lambda call: call.data.startswith("next_group") or call.data.startswith("prev_group"))
+def paginate_groups(call):
+    action, chat_id, current_index = call.data.split("|")
+    chat_id = int(chat_id)
+    current_index = int(current_index)
 
-    bot.send_message(chat_id, "Кому нужно поставить задачу?", parse_mode="HTML", reply_markup=keyboard)
+    new_index = current_index + 1 if action == "next_group" else current_index - 1
 
+    send_employee_selection(chat_id, new_index, message_id=call.message.message_id)
 
 @bot.callback_query_handler(func=lambda call: call.data.startswith("select_employee"))
 def select_employee(call):
     """Добавляет сотрудника в список получателей задачи."""
-    _, chat_id, user_id = call.data.split("|")
-    chat_id, user_id = int(chat_id), int(user_id)
+    _, chat_id, user_id, group_index = call.data.split("|")
+    chat_id, user_id, group_index = int(chat_id), int(user_id), int(group_index)
 
     if chat_id not in task_data:
         bot.answer_callback_query(call.id, "⚠ Ошибка: задача не найдена.")
@@ -926,7 +960,6 @@ def select_employee(call):
         task_data[chat_id]["selected_users"].append(user_id)
 
     bot.edit_message_reply_markup(call.message.chat.id, call.message.message_id, reply_markup=None)
-
     send_selected_users(chat_id)
 
 
@@ -961,8 +994,9 @@ def send_selected_users(chat_id):
 def add_more_users(call):
     """Позволяет выбрать ещё сотрудников."""
     chat_id = int(call.data.split("|")[1])
+    group_index = task_data.get(chat_id, {}).get("group_index", 0)
     bot.edit_message_reply_markup(call.message.chat.id, call.message.message_id, reply_markup=None)
-    send_employee_selection(chat_id)
+    send_employee_selection(chat_id, group_index)
 
 @bot.callback_query_handler(func=lambda call: call.data.startswith("send_task"))
 def send_task(call):
