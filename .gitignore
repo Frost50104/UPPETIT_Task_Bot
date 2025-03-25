@@ -1,5 +1,7 @@
 config.py
 
+user_cache.json
+
 # Игнорирование системного файла macOS
 .DS_Store
 
