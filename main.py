@@ -312,7 +312,13 @@ def process_new_user_id(message):
                 existing_ids_list = []
 
             if new_user_id in existing_ids_list:
-                bot.send_message(chat_id, f"⚠ Пользователь с ID <b>{new_user_id}</b> уже в группе {group_name}.", parse_mode="HTML")
+                try:
+                    user_info = bot.get_chat(new_user_id)
+                    user_name = user_info.first_name
+                except Exception:
+                    user_name = f"ID {new_user_id}"
+                bot.send_message(chat_id, f"⚠ Пользователь <b>{user_name}</b> уже в группе {group_name}.",
+                                 parse_mode="HTML")
                 return
 
             existing_ids_list.append(new_user_id)
@@ -339,9 +345,15 @@ def process_new_user_id(message):
     from users_cache import build_user_cache
     build_user_cache()
 
+    try:
+        user_info = bot.get_chat(new_user_id)
+        user_name = user_info.first_name
+    except Exception:
+        user_name = f"ID {new_user_id}"
+
     bot.send_message(
         chat_id,
-        f"✅ Пользователь с ID <b>{new_user_id}</b> добавлен в группу <b>{group_name}</b>!\n\n🔄 Кэш пользователей обновлён.",
+        f"✅ Пользователь <b>{user_name}</b> добавлен в группу <b>{group_name}</b>!\n\n🔄 База пользователей обновлена.",
         parse_mode="HTML"
     )
 
