@@ -1488,31 +1488,177 @@ def send_control_panel_tasks():
 
 # ========= Перезапуск планировщика =========
 def restart_scheduler():
-    """Перезапускает планировщик с учетом статуса автоматической рассылки."""
-    importlib.reload(config)  # Перезагружаем config.py
-
+    importlib.reload(config)
     schedule.clear()
 
-    if config.status_work_time == "off":
-        print("⛔ Автоматическая рассылка отключена. Планировщик не запущен.")
-        return  # Если авторассылка отключена, выходим из функции
+    # Ежедневная
+    if config.status_work_time == "on":
+        for work_time in config.work_time:
+            schedule.every().day.at(work_time).do(send_control_panel_tasks)
 
-    for work_time in config.work_time:
-        schedule.every().day.at(work_time).do(send_control_panel_tasks)
+    # Еженедельная
+    if config.status_weekly == "on":
+        for day, time_str in config.weekly_schedule:
+            getattr(schedule.every(), day).at(time_str).do(send_weekly_tasks)
+
+    print("✅ Планировщик перезапущен!")
 
     print(f"✅ Планировщик обновлен! Новое расписание: {config.work_time}")
 
 
+
+
+
+# ========= Еженедельная автоматическая рассылка =========
+@bot.message_handler(commands=['set_day'])
+def handle_set_day(message):
+    if not is_admin(message.from_user.id):
+        bot.send_message(message.chat.id, "⛔ У вас нет прав изменять недельное расписание.")
+        return
+
+    current_schedule = "\n".join([f"{day.capitalize()} в {time}" for day, time in config.weekly_schedule])
+    current_status = "✅ Включена" if config.status_weekly == "on" else "⛔ Выключена"
+
+    bot.send_message(
+        message.chat.id,
+        f"📅 Текущее недельное расписание:\n{current_schedule}\n\n"
+        f"🔄 *Статус:* {current_status}\n\nВведите новое расписание в формате 'day HH:MM', например:\n"
+        f"`monday 10:00 wednesday 15:30`",
+        parse_mode="Markdown"
+    )
+
+    bot.register_next_step_handler(message, update_weekly_schedule)
+
+def update_weekly_schedule(message):
+    if not is_admin(message.from_user.id):
+        bot.send_message(message.chat.id, "⛔ Нет доступа.")
+        return
+
+    parts = message.text.strip().split()
+    if len(parts) % 2 != 0:
+        bot.send_message(message.chat.id, "⚠ Неверный формат. Введите пары: день и время.")
+        return
+
+    new_schedule = []
+    for i in range(0, len(parts), 2):
+        day = parts[i].lower()
+        time_part = parts[i+1]
+        if day not in ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]:
+            bot.send_message(message.chat.id, f"⚠ Неверный день недели: {day}")
+            return
+        if not re.match(r"^\d{1,2}:\d{2}$", time_part):
+            bot.send_message(message.chat.id, f"⚠ Неверный формат времени: {time_part}")
+            return
+        time_part = time_part.zfill(5)  # 9:00 → 09:00
+        new_schedule.append((day, time_part))
+
+    # Обновляем config.py
+    with open("config.py", "r", encoding="utf-8") as f:
+        lines = f.readlines()
+
+    for i, line in enumerate(lines):
+        if line.startswith("weekly_schedule"):
+            lines[i] = f"weekly_schedule = {new_schedule}\n"
+
+    with open("config.py", "w", encoding="utf-8") as f:
+        f.writelines(lines)
+
+    importlib.reload(config)
+    bot.send_message(message.chat.id, "✅ Недельное расписание обновлено!")
+
+    restart_scheduler()
+
+def send_weekly_tasks():
+    for performers, tasks_text in config.control_panel.items():
+        for performer in performers:
+            try:
+                bot.send_message(performer, f"📌 *Еженедельная задача:*\n{tasks_text}", parse_mode="Markdown")
+                bot.send_message(performer, "📷 Отправьте фото выполнения.")
+                task_data[performer] = {"task_text": tasks_text}
+            except Exception as e:
+                print(f"⚠ Ошибка при рассылке: {e}")
+
+# Еженедельная рассылка
+if config.status_weekly == "on":
+    for day, time_str in config.weekly_schedule:
+        getattr(schedule.every(), day).at(time_str).do(send_weekly_tasks)
+
+# ========= Команда /auto_send_weekly =========
+@bot.message_handler(commands=['auto_send_weekly'])
+def handle_auto_send_weekly(message):
+    """Показывает статус еженедельной рассылки и предлагает его изменить."""
+    if not is_admin(message.from_user.id):
+        bot.send_message(message.chat.id, "⛔ У вас нет прав изменять статус еженедельной рассылки.")
+        return
+
+    importlib.reload(config)
+    current_status = "✅ Включена" if config.status_weekly == "on" else "⛔ Выключена"
+    schedule_list = "\n".join([f"{day.capitalize()} в {time}" for day, time in config.weekly_schedule])
+
+    keyboard = InlineKeyboardMarkup()
+    keyboard.add(
+        InlineKeyboardButton("✅ Да", callback_data="change_weekly_status"),
+        InlineKeyboardButton("❌ Нет", callback_data="cancel_weekly_status")
+    )
+
+    bot.send_message(
+        message.chat.id,
+        f"📅 *Недельное расписание:*\n{schedule_list}\n\n"
+        f"🔄 *Статус еженедельной рассылки:* {current_status}\n\n"
+        f"Желаете изменить статус еженедельной рассылки?",
+        parse_mode="Markdown",
+        reply_markup=keyboard
+    )
+
+# ========= Обработка переключателя /auto_send_weekly =========
+@bot.callback_query_handler(func=lambda call: call.data in ["change_weekly_status", "cancel_weekly_status"])
+def process_weekly_status_change(call):
+    """Обрабатывает переключение статуса еженедельной рассылки."""
+    if not is_admin(call.from_user.id):
+        bot.answer_callback_query(call.id, "⛔ У вас нет прав изменять статус.")
+        return
+
+    if call.data == "cancel_weekly_status":
+        bot.edit_message_text("❌ Изменение отменено.", call.message.chat.id, call.message.message_id)
+        return
+
+    importlib.reload(config)
+    new_status = "off" if config.status_weekly == "on" else "on"
+
+    # Обновляем config.py
+    with open("config.py", "r", encoding="utf-8") as file:
+        config_content = file.readlines()
+
+    for i, line in enumerate(config_content):
+        if line.strip().startswith("status_weekly"):
+            config_content[i] = f"status_weekly = '{new_status}'\n"
+            break
+
+    with open("config.py", "w", encoding="utf-8") as file:
+        file.writelines(config_content)
+
+    importlib.reload(config)
+    restart_scheduler()
+
+    new_status_text = "✅ Включена" if new_status == "on" else "⛔ Выключена"
+    bot.edit_message_text(f"🔄 Новый статус еженедельной рассылки: {new_status_text}",
+                          call.message.chat.id, call.message.message_id)
+
+
+
+
+
+
+
 # ========= Фоновый процесс планировщика =========
 def schedule_jobs():
-    """Запускает бесконечный цикл выполнения задач, но только если авторассылка включена."""
     while True:
-        importlib.reload(config)  # Загружаем актуальные настройки
+        importlib.reload(config)
 
-        if config.status_work_time == "on":
+        if config.status_work_time == "on" or config.status_weekly == "on":
             schedule.run_pending()
 
-        time.sleep(20)  # Проверка каждые 20 секунд
+        time.sleep(20)
 
 schedule_thread = threading.Thread(target=schedule_jobs)
 schedule_thread.daemon = True
