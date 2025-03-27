@@ -1491,19 +1491,15 @@ def restart_scheduler():
     importlib.reload(config)
     schedule.clear()
 
-    # Ежедневная
     if config.status_work_time == "on":
         for work_time in config.work_time:
             schedule.every().day.at(work_time).do(send_control_panel_tasks)
 
-    # Еженедельная
     if config.status_weekly == "on":
         for day, time_str in config.weekly_schedule:
             getattr(schedule.every(), day).at(time_str).do(send_weekly_tasks)
 
-    print("✅ Планировщик перезапущен!")
-
-    print(f"✅ Планировщик обновлен! Новое расписание: {config.work_time}")
+    print(f"✅ Планировщик обновлён!\n📅 Ежедневно: {config.work_time if config.status_work_time == 'on' else '❌'}\n🗓 Еженедельно: {config.weekly_schedule if config.status_weekly == 'on' else '❌'}")
 
 
 
@@ -1653,11 +1649,7 @@ def process_weekly_status_change(call):
 # ========= Фоновый процесс планировщика =========
 def schedule_jobs():
     while True:
-        importlib.reload(config)
-
-        if config.status_work_time == "on" or config.status_weekly == "on":
-            schedule.run_pending()
-
+        schedule.run_pending()
         time.sleep(20)
 
 schedule_thread = threading.Thread(target=schedule_jobs)
