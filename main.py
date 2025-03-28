@@ -1512,15 +1512,30 @@ def handle_set_day(message):
         bot.send_message(message.chat.id, "⛔ У вас нет прав изменять недельное расписание.")
         return
 
-    current_schedule = "\n".join([f"{day.capitalize()} в {time}" for day, time in config.weekly_schedule])
+    # Перевод с английского на русский
+    day_translate_reverse = {
+        "monday": "Понедельник",
+        "tuesday": "Вторник",
+        "wednesday": "Среда",
+        "thursday": "Четверг",
+        "friday": "Пятница",
+        "saturday": "Суббота",
+        "sunday": "Воскресенье"
+    }
+
+    current_schedule = "\n".join([
+        f"{day_translate_reverse.get(day, day)} в {time}"
+        for day, time in config.weekly_schedule
+    ])
     current_status = "✅ Включена" if config.status_weekly == "on" else "⛔ Выключена"
 
     bot.send_message(
         message.chat.id,
-        f"📅 Текущее недельное расписание:\n{current_schedule}\n\n"
-        f"🔄 *Статус:* {current_status}\n\nВведите новое расписание в формате 'day HH:MM', например:\n"
-        f"`monday 10:00 wednesday 15:30`",
-        parse_mode="Markdown"
+        f"📅 <b>Текущее недельное расписание:</b>\n{current_schedule}\n\n"
+        f"🔄 <b>Статус:</b> {current_status}\n\n"
+        f"Введите новое расписание в формате <i>день время</i>, например:\n"
+        f"<code>понедельник 10:00 среда 15:30</code>",
+        parse_mode="HTML"
     )
 
     bot.register_next_step_handler(message, update_weekly_schedule)
@@ -1532,20 +1547,36 @@ def update_weekly_schedule(message):
 
     parts = message.text.strip().split()
     if len(parts) % 2 != 0:
-        bot.send_message(message.chat.id, "⚠ Неверный формат. Введите пары: день и время.")
+        bot.send_message(message.chat.id, "⚠ Неверный формат. Используйте команду /set_day еще раз и введите корректно пары: день и время.")
         return
+
+    # Словарь соответствия русских и английских дней
+    day_translation = {
+        "понедельник": "monday",
+        "вторник": "tuesday",
+        "среда": "wednesday",
+        "четверг": "thursday",
+        "пятница": "friday",
+        "суббота": "saturday",
+        "воскресенье": "sunday"
+    }
 
     new_schedule = []
     for i in range(0, len(parts), 2):
-        day = parts[i].lower()
-        time_part = parts[i+1]
+        day_input = parts[i].lower()
+        time_part = parts[i + 1]
+
+        # Преобразуем день недели
+        day = day_translation.get(day_input, day_input)
         if day not in ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]:
-            bot.send_message(message.chat.id, f"⚠ Неверный день недели: {day}")
+            bot.send_message(message.chat.id, f"⚠ Неверный день недели: {day_input}")
             return
+
         if not re.match(r"^\d{1,2}:\d{2}$", time_part):
             bot.send_message(message.chat.id, f"⚠ Неверный формат времени: {time_part}")
             return
-        time_part = time_part.zfill(5)  # 9:00 → 09:00
+
+        time_part = time_part.zfill(5)  # Приводим к формату HH:MM
         new_schedule.append((day, time_part))
 
     # Обновляем config.py
@@ -1561,7 +1592,6 @@ def update_weekly_schedule(message):
 
     importlib.reload(config)
     bot.send_message(message.chat.id, "✅ Недельное расписание обновлено!")
-
     restart_scheduler()
 
 def send_weekly_tasks():
@@ -1588,8 +1618,24 @@ def handle_auto_send_weekly(message):
         return
 
     importlib.reload(config)
+
+    # Перевод дней недели на русский
+    day_translate_reverse = {
+        "monday": "Понедельник",
+        "tuesday": "Вторник",
+        "wednesday": "Среда",
+        "thursday": "Четверг",
+        "friday": "Пятница",
+        "saturday": "Суббота",
+        "sunday": "Воскресенье"
+    }
+
+    schedule_list = "\n".join([
+        f"{day_translate_reverse.get(day, day)} в {time}"
+        for day, time in config.weekly_schedule
+    ])
+
     current_status = "✅ Включена" if config.status_weekly == "on" else "⛔ Выключена"
-    schedule_list = "\n".join([f"{day.capitalize()} в {time}" for day, time in config.weekly_schedule])
 
     keyboard = InlineKeyboardMarkup()
     keyboard.add(
@@ -1599,10 +1645,10 @@ def handle_auto_send_weekly(message):
 
     bot.send_message(
         message.chat.id,
-        f"📅 *Недельное расписание:*\n{schedule_list}\n\n"
-        f"🔄 *Статус еженедельной рассылки:* {current_status}\n\n"
+        f"📅 <b>Недельное расписание:</b>\n{schedule_list}\n\n"
+        f"🔄 <b>Статус еженедельной рассылки:</b> {current_status}\n\n"
         f"Желаете изменить статус еженедельной рассылки?",
-        parse_mode="Markdown",
+        parse_mode="HTML",
         reply_markup=keyboard
     )
 
