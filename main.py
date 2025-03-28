@@ -592,6 +592,7 @@ def handle_set_task_group(message):
         InlineKeyboardButton("📆 Еженедельная", callback_data="select_task_type_weekly"),
         InlineKeyboardButton("🗓 Ежемесячная", callback_data="select_task_type_monthly")
     )
+    keyboard.add(InlineKeyboardButton("❌ Отмена", callback_data="cancel_task_group"))
 
     bot.send_message(
         message.chat.id,
@@ -602,10 +603,14 @@ def handle_set_task_group(message):
 @bot.callback_query_handler(func=lambda call: call.data.startswith("select_task_type_"))
 def handle_task_type_selection(call):
     task_type = call.data.replace("select_task_type_", "")  # daily / weekly / monthly
+    bot.answer_callback_query(call.id)
 
-    keyboard = InlineKeyboardMarkup(row_width=4)
-    for i in range(1, 8):
-        keyboard.add(InlineKeyboardButton(str(i), callback_data=f"edit_task_group_{task_type}_{i}"))
+    keyboard = InlineKeyboardMarkup(row_width=2)
+    for i, group_name in enumerate(config.performers.keys(), start=1):
+        callback_data = f"edit_task_group_{task_type}_{i}"  # безопасно!
+        keyboard.add(InlineKeyboardButton(group_name, callback_data=callback_data))
+
+    keyboard.add(InlineKeyboardButton("❌ Отмена", callback_data="cancel_task_group"))
 
     bot.edit_message_text(
         "Выберите группу, для которой нужно изменить задание:",
@@ -617,18 +622,87 @@ def handle_task_type_selection(call):
 @bot.callback_query_handler(func=lambda call: call.data.startswith("edit_task_group_"))
 def handle_group_selection(call):
     parts = call.data.split("_")  # ["edit", "task", "group", "daily", "1"]
-    task_type = parts[3]          # ✅ "daily"
-    group_number = parts[4]       # ✅ "1"
-
+    task_type = parts[3]
+    group_number = parts[4]
     bot.answer_callback_query(call.id)
-    bot.send_message(
-        call.message.chat.id,
-        f"Введите новое задание для группы {group_number} ({task_type}):"
+
+    group_names = list(config.performers.keys())
+    group_name = group_names[int(group_number) - 1]  # Название для вывода
+
+    # Удаляем кнопки
+    bot.edit_message_text(
+        f"Введите новое задание для группы <b>{group_name}</b>:",
+        chat_id=call.message.chat.id,
+        message_id=call.message.message_id,
+        parse_mode="HTML"
     )
+
     bot.register_next_step_handler(
         call.message,
         lambda m, tt=task_type, gn=group_number: update_single_task(m, tt, gn)
     )
+
+def update_named_task(message, task_type, group_name):
+    if not is_admin(message.from_user.id):
+        bot.send_message(message.chat.id, "⛔ Нет прав.")
+        return
+
+    # Преобразуем название группы в ключ task_group_X
+    group_index = list(config.performers.keys()).index(group_name) + 1
+    key = f"task_group_{group_index}"
+
+    block_name = {
+        "daily": "daily_tasks",
+        "weekly": "weekly_tasks",
+        "monthly": "monthly_tasks"
+    }[task_type]
+
+    # Загрузим config.py
+    with open("config.py", "r", encoding="utf-8") as f:
+        lines = f.readlines()
+
+    # Найдём и перезапишем словарь
+    current_dict = {}
+    inside = False
+    dict_text = ""
+    for line in lines:
+        if line.strip().startswith(f"{block_name}"):
+            inside = True
+            dict_text = line[line.find("=")+1:].strip()
+            continue
+        if inside:
+            if line.strip().startswith("#") or "=" in line:
+                break
+            dict_text += line
+
+    try:
+        current_dict = eval(dict_text)
+    except Exception as e:
+        bot.send_message(message.chat.id, f"⚠ Ошибка при чтении словаря: {e}")
+        return
+
+    current_dict[key] = message.text.strip()
+    new_dict_text = json.dumps(current_dict, indent=4, ensure_ascii=False)
+
+    # Заменяем в config.py
+    new_lines = []
+    skipping = False
+    for line in lines:
+        if line.strip().startswith(f"{block_name}"):
+            new_lines.append(f"{block_name} = {new_dict_text}\n")
+            skipping = True
+            continue
+        if skipping:
+            if line.strip().startswith("}") or "=" in line or line.strip().startswith("#"):
+                skipping = False
+            continue
+        new_lines.append(line)
+
+    with open("config.py", "w", encoding="utf-8") as f:
+        f.writelines(new_lines)
+
+    importlib.reload(config)
+    bot.send_message(message.chat.id, "✅ Задание обновлено!")
 
 def update_single_task(message, task_type, group_number):
     if not is_admin(message.from_user.id):
@@ -688,6 +762,11 @@ def update_single_task(message, task_type, group_number):
 
     importlib.reload(config)
     bot.send_message(message.chat.id, "✅ Задание обновлено!")
+
+@bot.callback_query_handler(func=lambda call: call.data == "cancel_task_group")
+def cancel_task_group_edit(call):
+    bot.answer_callback_query(call.id)
+    bot.edit_message_text("❌ Изменение задания отменено.", call.message.chat.id, call.message.message_id)
 
 
 @bot.callback_query_handler(func=lambda call: call.data.startswith("edit_task"))
