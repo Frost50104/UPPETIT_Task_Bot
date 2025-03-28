@@ -579,46 +579,116 @@ def delete_employee(call):
 
 
 
-# ========= Команда /set_tasks_group =========
-@bot.message_handler(commands=['set_tasks_group'])
-def handle_set_tasks_group(message):
-    """Позволяет администратору изменить задания для групп."""
-    if message.from_user.id not in config.ADMIN_ID:
-        bot.send_message(message.chat.id, "⛔ У вас нет прав изменять задания групп.")
+# ========= Команда /set_task_group =========
+@bot.message_handler(commands=['set_task_group'])
+def handle_set_task_group(message):
+    if not is_admin(message.from_user.id):
+        bot.send_message(message.chat.id, "⛔ Нет прав.")
         return
 
-    importlib.reload(config)  # Обновляем данные
-
-    global task_data
-    task_data = {}  # Создаем глобальный словарь для хранения выбранной группы
-
     keyboard = InlineKeyboardMarkup()
-    global group_name_map
-    group_name_map = {}
-
-    response = "<b>Текущие задания групп:</b>\n\n"
-
-    for group_name, performers_list in config.performers.items():
-        # Преобразуем название списка исполнителей в строку, чтобы соответствовать ключам в control_panel_for_set_tasks_group
-        performers_key = f"performers_list_{list(config.performers.keys()).index(group_name) + 1}"
-        correct_task = config.control_panel_for_set_tasks_group.get(performers_key, "❌ Нет задания")
-
-        response += f"🔹 <b>{group_name}:</b>\n<pre>{correct_task.strip()}</pre>\n\n"
-
-        group_hash = hashlib.md5(group_name.encode()).hexdigest()[:8]
-        group_name_map[group_hash] = group_name  # Сохраняем соответствие
-
-        callback_data = f"edit_task|{message.chat.id}|{group_hash}"
-        keyboard.add(InlineKeyboardButton(group_name[:30], callback_data=callback_data))
-
-    keyboard.add(InlineKeyboardButton("❌ Отмена", callback_data=f"cancel_set_tasks_group|{message.chat.id}"))
+    keyboard.add(
+        InlineKeyboardButton("📅 Ежедневная", callback_data="select_task_type_daily"),
+        InlineKeyboardButton("📆 Еженедельная", callback_data="select_task_type_weekly"),
+        InlineKeyboardButton("🗓 Ежемесячная", callback_data="select_task_type_monthly")
+    )
 
     bot.send_message(
         message.chat.id,
-        response + "Выберите группу, для которой хотите изменить задание:",
-        parse_mode="HTML",
+        "Выберите рассылку, для которой хотите изменить задачи по группам:",
         reply_markup=keyboard
     )
+
+@bot.callback_query_handler(func=lambda call: call.data.startswith("select_task_type_"))
+def handle_task_type_selection(call):
+    task_type = call.data.replace("select_task_type_", "")  # daily / weekly / monthly
+
+    keyboard = InlineKeyboardMarkup(row_width=4)
+    for i in range(1, 8):
+        keyboard.add(InlineKeyboardButton(str(i), callback_data=f"edit_task_group_{task_type}_{i}"))
+
+    bot.edit_message_text(
+        "Выберите группу, для которой нужно изменить задание:",
+        chat_id=call.message.chat.id,
+        message_id=call.message.message_id,
+        reply_markup=keyboard
+    )
+
+@bot.callback_query_handler(func=lambda call: call.data.startswith("edit_task_group_"))
+def handle_group_selection(call):
+    parts = call.data.split("_")  # ["edit", "task", "group", "daily", "1"]
+    task_type = parts[3]          # ✅ "daily"
+    group_number = parts[4]       # ✅ "1"
+
+    bot.answer_callback_query(call.id)
+    bot.send_message(
+        call.message.chat.id,
+        f"Введите новое задание для группы {group_number} ({task_type}):"
+    )
+    bot.register_next_step_handler(
+        call.message,
+        lambda m, tt=task_type, gn=group_number: update_single_task(m, tt, gn)
+    )
+
+def update_single_task(message, task_type, group_number):
+    if not is_admin(message.from_user.id):
+        bot.send_message(message.chat.id, "⛔ Нет прав.")
+        return
+
+    key = f"task_group_{group_number}"
+    block_name = {
+        "daily": "daily_tasks",
+        "weekly": "weekly_tasks",
+        "monthly": "monthly_tasks"
+    }[task_type]
+
+    with open("config.py", "r", encoding="utf-8") as f:
+        lines = f.readlines()
+
+    # Извлекаем текущий словарь
+    current_dict = {}
+    inside = False
+    dict_text = ""
+    for line in lines:
+        if line.strip().startswith(f"{block_name}"):
+            inside = True
+            dict_text = line[line.find("=")+1:].strip()
+            continue
+        if inside:
+            if line.strip().startswith("#") or "=" in line:
+                break
+            dict_text += line
+
+    try:
+        current_dict = eval(dict_text)
+    except Exception as e:
+        bot.send_message(message.chat.id, f"⚠ Ошибка чтения текущего словаря: {e}")
+        return
+
+    # Обновляем ключ
+    current_dict[key] = message.text.strip()
+    formatted_dict = json.dumps(current_dict, indent=4, ensure_ascii=False)
+
+    # Перезаписываем блок в файле
+    new_lines = []
+    inside = False
+    for line in lines:
+        if line.strip().startswith(f"{block_name}"):
+            inside = True
+            new_lines.append(f"{block_name} = {formatted_dict}\n")
+            continue
+        if inside:
+            if line.strip().startswith("}") or line.strip().startswith("#") or "=" in line:
+                inside = False
+            continue
+        new_lines.append(line)
+
+    with open("config.py", "w", encoding="utf-8") as f:
+        f.writelines(new_lines)
+
+    importlib.reload(config)
+    bot.send_message(message.chat.id, "✅ Задание обновлено!")
+
 
 @bot.callback_query_handler(func=lambda call: call.data.startswith("edit_task"))
 def edit_task(call):
@@ -1472,21 +1542,17 @@ def update_schedule(message):
 
 # ========= Автоматическая отправка задач по расписанию =========
 def send_control_panel_tasks():
-    """Отправляет задачи сотрудникам и сохраняет их текст в task_data."""
-    for performers, tasks_text in config.control_panel.items():
+    for group_name, performers in config.performers_by_group.items():
+        tasks_text = config.daily_tasks.get(group_name)
+        if not tasks_text:
+            continue
         for performer in performers:
             try:
-                bot.send_message(performer, f"📌 *Ваши ежедневные задачи:*\n{tasks_text}", parse_mode="Markdown")
+                bot.send_message(performer, f"📌 <b>Задача на сегодня:</b>\n{tasks_text}", parse_mode="HTML")
                 bot.send_message(performer, "📷 Отправьте фото выполнения.")
-
-                # ✅ Сохраняем текст задачи в task_data
                 task_data[performer] = {"task_text": tasks_text}
-
-            except telebot.apihelper.ApiTelegramException as e:
-                if "bot was blocked by the user" in str(e):
-                    print(f"⚠ Бот заблокирован пользователем {performer}.")
-                else:
-                    print(f"⚠ Ошибка при отправке сообщения пользователю {performer}: {e}")
+            except Exception as e:
+                print(f"⚠ Ошибка: {e}")
 
 # ========= Перезапуск планировщика =========
 def check_and_send_monthly(target_day):
@@ -1583,15 +1649,17 @@ def update_monthly_schedule(message):
     restart_scheduler()
 
 def send_monthly_tasks():
-    print("📬 Запуск ежемесячной рассылки")
-    for performers, tasks_text in config.control_panel.items():
+    for group_name, performers in config.performers_by_group.items():
+        tasks_text = config.monthly_tasks.get(group_name)
+        if not tasks_text:
+            continue
         for performer in performers:
             try:
                 bot.send_message(performer, f"📌 <b>Ежемесячная задача:</b>\n{tasks_text}", parse_mode="HTML")
                 bot.send_message(performer, "📷 Отправьте фото выполнения.")
                 task_data[performer] = {"task_text": tasks_text}
             except Exception as e:
-                print(f"⚠ Ошибка при рассылке: {e}")
+                print(f"⚠ Ошибка: {e}")
 
 @bot.message_handler(commands=['auto_send_monthly'])
 def handle_auto_send_monthly(message):
@@ -1755,14 +1823,17 @@ def update_weekly_schedule(message):
     restart_scheduler()
 
 def send_weekly_tasks():
-    for performers, tasks_text in config.control_panel.items():
+    for group_name, performers in config.performers_by_group.items():
+        tasks_text = config.weekly_tasks.get(group_name)
+        if not tasks_text:
+            continue
         for performer in performers:
             try:
-                bot.send_message(performer, f"📌 *Еженедельная задача:*\n{tasks_text}", parse_mode="Markdown")
+                bot.send_message(performer, f"📌 <b>Еженедельная задача:</b>\n{tasks_text}", parse_mode="HTML")
                 bot.send_message(performer, "📷 Отправьте фото выполнения.")
                 task_data[performer] = {"task_text": tasks_text}
             except Exception as e:
-                print(f"⚠ Ошибка при рассылке: {e}")
+                print(f"⚠ Ошибка: {e}")
 
 # Еженедельная рассылка
 if config.status_weekly == "on":
