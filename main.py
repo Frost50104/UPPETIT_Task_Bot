@@ -58,7 +58,7 @@ start_scheduler_thread() # фоновый процесс планировщик�
 # ========= Стандартные команды =========
 handle_cmnd_start(bot) # команда /start
 handle_cmnd_admins(bot) # команда /admins
-handle_cmnd_help(bot) # команда /help
+handle_cmnd_help(bot, is_admin) # команда /help
 handle_cmnd_my_id(bot) # команда /my_id
 handle_cmnd_chat_id(bot) # команда /chat_id
 handle_cmnd_set_group_name(bot, is_admin) # команда /set_group_name
