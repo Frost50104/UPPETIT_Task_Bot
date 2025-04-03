@@ -32,8 +32,10 @@ from handlers.cmnd_tasks_list import handle_cmnd_tasks_list
 from handlers.cmnd_clear_tasks_list import handle_cmnd_clear_tasks_list
 from handlers.cmnd_clear_all_tasks_list import handle_cmnd_clear_all_tasks_list
 from handlers.cmnd_arbeiten import handle_cmnd_arbeiten
+from handlers.cmnd_show_log import handle_cmnd_show_log
+from handlers.cmnd_clear_log import handle_cmnd_clear_log
 
-from config import ADMIN_ID
+
 
 # Создание бота
 bot = telebot.TeleBot(config.TOKEN)
@@ -74,7 +76,7 @@ handle_cmnd_update_user_cache(bot, is_admin) # обновление кэша с�
 handle_cmnd_bot_users(bot, is_admin) # команда /bot_users
 handle_cmnd_all_task(bot, is_admin, task_data) # команда /all_task
 handle_cmnd_show_schedule(bot, is_admin) # команда /show_schedule
-handle_photo_submission(bot) # работа с фото в контрольном чате
+handle_photo_submission(bot, user_cache) # работа с фото в контрольном чате
 handle_cmnd_auto_send(bot, is_admin, lambda: restart_scheduler(bot)) # команда /auto_send
 handle_cmnd_set_time(bot, is_admin, lambda: restart_scheduler(bot)) # команда /set_time
 handle_cmnd_set_month(bot, is_admin, lambda: restart_scheduler(bot)) # команда /set_month
@@ -84,6 +86,8 @@ handle_cmnd_tasks_list(bot, is_admin, user_cache)
 handle_cmnd_clear_tasks_list(bot, is_admin)
 handle_cmnd_clear_all_tasks_list(bot, is_admin)
 handle_cmnd_arbeiten(bot, is_admin)
+handle_cmnd_show_log(bot, is_admin)
+handle_cmnd_clear_log(bot, is_admin)
 
 
 # ========= Запуск бота =========

@@ -1,9 +1,9 @@
 import telebot
 from telebot.types import Message, CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton
 import config
-from task_storage import update_task_status, load_tasks
+from task_storage import update_task_status, load_tasks, log_task_action
 
-def handle_photo_submission(bot):
+def handle_photo_submission(bot, user_cache):
     """Регистрация обработки фото от исполнителей и контрольной панели"""
 
     @bot.message_handler(content_types=['photo'])
@@ -92,10 +92,14 @@ def handle_photo_submission(bot):
 
         if action == "accept":
             update_task_status(user_id, task_msg_id, "выполнена")
+            admin_name = call.from_user.first_name or f"ID {call.from_user.id}"
+            log_task_action(user_id, task_msg_id, action, user_cache, admin_name)
             bot.send_message(user_id, "✅ Фото принято! Спасибо за выполнение задачи.", parse_mode="HTML")
             bot.answer_callback_query(call.id, "Фото принято!")
         elif action == "reject":
             update_task_status(user_id, task_msg_id, "не выполнена")
+            admin_name = call.from_user.first_name or f"ID {call.from_user.id}"
+            log_task_action(user_id, task_msg_id, action, user_cache, admin_name)
             bot.send_message(user_id, "❌ Фото не принято. Пожалуйста, переделайте задачу и отправьте новое фото, ответив на сообщение с задачей.", parse_mode="HTML", reply_to_message_id=task_msg_id)
             bot.answer_callback_query(call.id, "Фото отклонено!")
             # request_new_photo(bot, user_id, task_msg_id)

@@ -50,6 +50,9 @@ def handle_cmnd_add_user(bot, is_admin, task_data):
         for index, group_name in group_index_map.items():
             keyboard.add(InlineKeyboardButton(group_name[:30], callback_data=f"select_group_{index}"))
 
+        # Добавляем кнопку "Отмена" под всеми группами
+        keyboard.add(InlineKeyboardButton("❌ Отмена", callback_data="cancel_group_selection"))
+
         bot.edit_message_text(
             "Выберите группу, в которую нужно добавить нового сотрудника:",
             call.message.chat.id,
@@ -106,6 +109,9 @@ def handle_cmnd_add_user(bot, is_admin, task_data):
             return
 
         group_name = task_data[chat_id]["selected_group"]
+
+        # 🔄 Уведомляем о процессе
+        loading_msg = bot.send_message(chat_id, "🔄 Обновление базы пользователей...", parse_mode="HTML")
 
         # Читаем config.py
         config_file = "config.py"
@@ -176,10 +182,29 @@ def handle_cmnd_add_user(bot, is_admin, task_data):
         except Exception:
             user_name = f"ID {new_user_id}"
 
-        bot.send_message(
-            chat_id,
-            f"✅ Пользователь <b>{user_name}</b> добавлен в группу <b>{group_name}</b>!\n\n🔄 База пользователей обновлена.",
+        bot.edit_message_text(
+            f"✅ Пользователь <b>{user_name}</b> добавлен в группу <b>{group_name}</b>!\n\n✅ База пользователей обновлена.",
+            chat_id=chat_id,
+            message_id=loading_msg.message_id,
             parse_mode="HTML"
         )
 
         del task_data[chat_id]
+
+    @bot.callback_query_handler(func=lambda call: call.data == "cancel_group_selection")
+    def cancel_group_selection(call):
+        if not is_admin(call.from_user.id):
+            bot.answer_callback_query(call.id, "⛔ У вас нет прав.")
+            return
+
+        bot.edit_message_text(
+            "❌ Добавление пользователя отменено.",
+            chat_id=call.message.chat.id,
+            message_id=call.message.message_id,
+            parse_mode="HTML"
+        )
+
+        # Очищаем временные данные, если есть
+        task_data.pop(call.message.chat.id, None)
+
+        bot.answer_callback_query(call.id)
