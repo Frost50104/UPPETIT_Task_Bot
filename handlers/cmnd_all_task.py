@@ -1,9 +1,9 @@
-
 import importlib
 import config
 import json
 import telebot
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
+from task_storage import assign_task
 
 def handle_cmnd_all_task(bot, is_admin, task_data):
     """Регистрация обработчиков команды /user_task"""
@@ -31,8 +31,8 @@ def handle_cmnd_all_task(bot, is_admin, task_data):
         for performers, tasks_text in config.control_panel.items():
             for performer in performers:
                 try:
-                    bot.send_message(performer, f"📌 *Новое задание:*\n{task_text}", parse_mode="Markdown")
-                    bot.send_message(performer, "📷 Отправьте фото выполнения.")
+                    msg = bot.send_message(performer, f"📌 *Новое задание:*\n{task_text}", parse_mode="HTML")
+                    assign_task(performer, task_text, msg.message_id)
                     task_data[performer] = {"task_text": task_text}
                     total_sent += 1  # Увеличиваем счетчик
                 except telebot.apihelper.ApiTelegramException as e:

@@ -1,15 +1,10 @@
-import importlib
-import schedule
-import config
-import datetime
-import auto_send_tasks_on_schedule
-
 # ========= Перезапуск планировщика =========
 import importlib
 import schedule
 import config
 import auto_send_tasks_on_schedule
 import datetime
+from task_storage import assign_task
 
 # === Перезапуск планировщика ===
 def restart_scheduler(bot):
@@ -46,8 +41,8 @@ def send_weekly_tasks(bot):
             continue
         for user_id in performers:
             try:
-                bot.send_message(user_id, f"📌 <b>Еженедельная задача:</b>\n{task_text}", parse_mode="HTML")
-                bot.send_message(user_id, "📷 Отправьте фото выполнения.")
+                msg = bot.send_message(user_id, f"📌 <b>Еженедельная задача:</b>\n{task_text}", parse_mode="HTML")
+                assign_task(user_id, task_text, msg.message_id)
             except Exception as e:
                 print(f"⚠ Ошибка при отправке еженедельной задачи пользователю {user_id}: {e}")
 
@@ -64,7 +59,7 @@ def send_monthly_tasks(bot):
             continue
         for user_id in performers:
             try:
-                bot.send_message(user_id, f"📌 <b>Ежемесячная задача:</b>\n{task_text}", parse_mode="HTML")
-                bot.send_message(user_id, "📷 Отправьте фото выполнения.")
+                msg = bot.send_message(user_id, f"📌 <b>Ежемесячная задача:</b>\n{task_text}", parse_mode="HTML")
+                assign_task(user_id, task_text, msg.message_id)
             except Exception as e:
                 print(f"⚠ Ошибка при отправке ежемесячной задачи пользователю {user_id}: {e}")

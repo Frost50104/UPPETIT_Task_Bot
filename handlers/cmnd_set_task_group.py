@@ -3,7 +3,6 @@ import config
 import json
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 
-
 def handle_cmnd_set_task_group(bot, is_admin, task_data, daily_tasks, weekly_tasks, monthly_tasks):
     """Регистрация обработчиков команды /set_task_group"""
     # ========= Команда /set_task_group =========

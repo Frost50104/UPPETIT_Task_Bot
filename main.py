@@ -1,19 +1,4 @@
-# from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
-# from telebot import types
-# import help_message
-# import schedule
-# import calendar
-# import datetime
-# import time
-# import threading
-# import ast
-# import re
-# import hashlib
-# import importlib
-# import json
-# from users_cache import build_user_cache
-# import auto_send_tasks_on_schedule
-# import restart_scheduler
+import json
 import telebot
 import config  # Файл с переменными
 from bot_instance import bot, is_admin, task_data
@@ -43,12 +28,22 @@ from handlers.cmnd_bot_users import handle_cmnd_bot_users
 from handlers.cmnd_all_task import handle_cmnd_all_task
 from handlers.cmnd_show_schedule import handle_cmnd_show_schedule
 from handlers.photo_submission import handle_photo_submission
+from handlers.cmnd_tasks_list import handle_cmnd_tasks_list
+from handlers.cmnd_clear_tasks_list import handle_cmnd_clear_tasks_list
+from handlers.cmnd_clear_all_tasks_list import handle_cmnd_clear_all_tasks_list
+from handlers.cmnd_arbeiten import handle_cmnd_arbeiten
 
 from config import ADMIN_ID
 
 # Создание бота
 bot = telebot.TeleBot(config.TOKEN)
-# переключить бота с тестового на основного
+
+# Подгрузrf user_cache.json
+try:
+    with open("user_cache.json", "r", encoding="utf-8") as f:
+        user_cache = json.load(f)
+except FileNotFoundError:
+    user_cache = {}
 
 # ========= Функция экранирования MarkdownV2 =========
 def escape_markdown_v2(text):
@@ -79,12 +74,16 @@ handle_cmnd_update_user_cache(bot, is_admin) # обновление кэша с�
 handle_cmnd_bot_users(bot, is_admin) # команда /bot_users
 handle_cmnd_all_task(bot, is_admin, task_data) # команда /all_task
 handle_cmnd_show_schedule(bot, is_admin) # команда /show_schedule
-handle_photo_submission(bot, task_data) # работа с фото в контрольном чате
+handle_photo_submission(bot) # работа с фото в контрольном чате
 handle_cmnd_auto_send(bot, is_admin, lambda: restart_scheduler(bot)) # команда /auto_send
 handle_cmnd_set_time(bot, is_admin, lambda: restart_scheduler(bot)) # команда /set_time
 handle_cmnd_set_month(bot, is_admin, lambda: restart_scheduler(bot)) # команда /set_month
 handle_cmnd_set_day(bot, is_admin, lambda: restart_scheduler(bot)) # команда /set_day
 handle_cmnd_auto_send_weekly(bot, is_admin, lambda: restart_scheduler(bot)) # команда /auto_send_weekly
+handle_cmnd_tasks_list(bot, is_admin, user_cache)
+handle_cmnd_clear_tasks_list(bot, is_admin)
+handle_cmnd_clear_all_tasks_list(bot, is_admin)
+handle_cmnd_arbeiten(bot, is_admin)
 
 
 # ========= Запуск бота =========

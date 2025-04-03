@@ -1,9 +1,9 @@
-
 import hashlib
 import importlib
 import config
 import telebot
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
+from task_storage import assign_task
 
 group_name_map = {}
 
@@ -141,8 +141,8 @@ def handle_cmnd_group_task(bot, is_admin, task_data):
 
         for user_id in user_ids:
             try:
-                bot.send_message(user_id, f"📌 <b>Новое задание:</b>\n{task_text}", parse_mode="HTML")
-                bot.send_message(user_id, "📷 Отправьте фото выполнения.")
+                msg = bot.send_message(user_id, f"📌 <b>Новое задание:</b>\n{task_text}", parse_mode="HTML")
+                assign_task(user_id, task_text, msg.message_id)
                 task_data[user_id] = {"task_text": task_text}
             except telebot.apihelper.ApiTelegramException as e:
                 print(f"⚠ Ошибка отправки пользователю {user_id}: {e}")

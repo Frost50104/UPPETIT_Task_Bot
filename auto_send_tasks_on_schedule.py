@@ -1,5 +1,6 @@
 import config
 from bot_instance import task_data
+from task_storage import assign_task
 
 # ========= Автоматическая отправка задач по расписанию =========
 def send_control_panel_tasks(bot):
@@ -9,8 +10,8 @@ def send_control_panel_tasks(bot):
             continue
         for performer in performers:
             try:
-                bot.send_message(performer, f"📌 <b>Задача на сегодня:</b>\n{tasks_text}", parse_mode="HTML")
-                bot.send_message(performer, "📷 Отправьте фото выполнения.")
+                msg = bot.send_message(performer, f"📌 <b>Задача на сегодня:</b>\n{tasks_text}", parse_mode="HTML")
+                assign_task(performer, tasks_text, msg.message_id)
                 task_data[performer] = {"task_text": tasks_text}
             except Exception as e:
                 print(f"⚠ Ошибка: {e}")
