@@ -37,10 +37,12 @@ from handlers.cmnd_clear_log import handle_cmnd_clear_log
 
 
 
+
+
 # Создание бота
 bot = telebot.TeleBot(config.TOKEN)
 
-# Подгрузrf user_cache.json
+# Подгрузка user_cache.json
 try:
     with open("user_cache.json", "r", encoding="utf-8") as f:
         user_cache = json.load(f)

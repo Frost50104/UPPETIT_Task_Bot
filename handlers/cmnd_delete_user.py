@@ -131,6 +131,9 @@ def handle_cmnd_delete_user(bot, is_admin, task_data):
         for index, group_name in group_index_map.items():
             keyboard.add(InlineKeyboardButton(group_name[:30], callback_data=f"delete_group_{index}"))
 
+        # Добавляем кнопку "❌ Отмена"
+        keyboard.add(InlineKeyboardButton("❌ Отмена", callback_data="cancel_delete_employee_group"))
+
         bot.edit_message_text(
             "Выберите группу, из которой нужно удалить сотрудника:",
             chat_id,
