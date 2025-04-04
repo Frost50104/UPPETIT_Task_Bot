@@ -5,6 +5,7 @@ import config
 import auto_send_tasks_on_schedule
 import datetime
 from task_storage import assign_task
+from send_planned_tasks import send_scheduled_tasks
 
 # === Перезапуск планировщика ===
 def restart_scheduler(bot):
@@ -27,6 +28,10 @@ def restart_scheduler(bot):
         for day, time_str in config.monthly_schedule:
             # Каждый день в указанное время запускаем проверку
             schedule.every().day.at(time_str).do(check_and_send_monthly, bot, day)
+
+    # ⏰ Каждую минуту — проверка запланированных задач
+    schedule.every(1).minutes.do(send_scheduled_tasks, bot)
+
 
     print(f"✅ Планировщик перезапущен!")
     print(f"📅 Ежедневно: {config.work_time if config.status_work_time == 'on' else '❌'}")

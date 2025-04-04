@@ -34,6 +34,7 @@ from handlers.cmnd_clear_all_tasks_list import handle_cmnd_clear_all_tasks_list
 from handlers.cmnd_arbeiten import handle_cmnd_arbeiten
 from handlers.cmnd_show_log import handle_cmnd_show_log
 from handlers.cmnd_clear_log import handle_cmnd_clear_log
+from handlers.cmnd_planning import handle_cmnd_planning
 
 
 
@@ -90,6 +91,7 @@ handle_cmnd_clear_all_tasks_list(bot, is_admin)
 handle_cmnd_arbeiten(bot, is_admin)
 handle_cmnd_show_log(bot, is_admin)
 handle_cmnd_clear_log(bot, is_admin)
+handle_cmnd_planning(bot, is_admin, task_data)
 
 
 # ========= Запуск бота =========
