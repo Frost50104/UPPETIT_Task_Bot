@@ -132,14 +132,15 @@ def handle_cmnd_group_task(bot, is_admin, task_data):
 
         task_text = task_data[chat_id]["task_text"]
         group_names = task_data[chat_id]["selected_groups"]
-        user_ids = []
 
+        # Используем set для удаления дубликатов
+        unique_user_ids = set()
         for group_name in group_names:
-            user_ids.extend(config.performers.get(group_name, []))
+            unique_user_ids.update(config.performers.get(group_name, []))
 
         bot.edit_message_reply_markup(call.message.chat.id, call.message.message_id, reply_markup=None)
 
-        for user_id in user_ids:
+        for user_id in unique_user_ids:
             try:
                 msg = bot.send_message(user_id, f"📌 <b>Новое задание:</b>\n{task_text}", parse_mode="HTML")
                 assign_task(user_id, task_text, msg.message_id)

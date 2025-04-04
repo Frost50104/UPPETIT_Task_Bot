@@ -1,6 +1,7 @@
 import telebot
 from telebot.types import Message, CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton
 import config
+from bot_instance import task_data
 from task_storage import update_task_status, load_tasks, log_task_action
 
 def handle_photo_submission(bot, user_cache):
@@ -52,9 +53,11 @@ def handle_photo_submission(bot, user_cache):
 
         # Добавляем inline-кнопки
         keyboard = InlineKeyboardMarkup()
-        keyboard.add(
-            InlineKeyboardButton("✅ Принять", callback_data=f"accept_{sent_message.message_id}_{user_id}_{original_message_id}"),
-            InlineKeyboardButton("❌ Отклонить", callback_data=f"reject_{sent_message.message_id}_{user_id}_{original_message_id}")
+        keyboard.row(
+            InlineKeyboardButton("✅ Принять",
+                                 callback_data=f"accept_{sent_message.message_id}_{user_id}_{original_message_id}"),
+            InlineKeyboardButton("❌ Отклонить",
+                                 callback_data=f"reject_{sent_message.message_id}_{user_id}_{original_message_id}")
         )
 
         bot.edit_message_reply_markup(
@@ -102,7 +105,64 @@ def handle_photo_submission(bot, user_cache):
             log_task_action(user_id, task_msg_id, action, user_cache, admin_name)
             bot.send_message(user_id, "❌ Фото не принято. Пожалуйста, переделайте задачу и отправьте новое фото, ответив на сообщение с задачей.", parse_mode="HTML", reply_to_message_id=task_msg_id)
             bot.answer_callback_query(call.id, "Фото отклонено!")
-            # request_new_photo(bot, user_id, task_msg_id)
 
-# def request_new_photo(bot, user_id, message_id):
-#     bot.send_message(user_id, "📷 Отправьте новое фото выполнения в ответ на задачу.", reply_to_message_id=message_id)
+    @bot.message_handler(
+        func=lambda msg: msg.chat.id == config.control_chat_id and
+                         msg.reply_to_message and
+                         msg.reply_to_message.photo is not None
+    )
+    def handle_reply_comment(message: Message):
+        replied_msg_id = message.reply_to_message.message_id
+        admin_id = message.from_user.id
+        comment_text = message.text.strip()
+
+        tasks = load_tasks()
+
+        for uid, user_tasks in tasks.items():
+            for task in user_tasks:
+                if task.get("control_msg_id") == replied_msg_id:
+                    user_id = int(uid)
+                    task_msg_id = task["message_id"]
+
+                    # Обновляем статус
+                    update_task_status(user_id, task_msg_id, "не выполнена")
+                    admin_name = message.from_user.first_name or f"ID {admin_id}"
+                    log_task_action(user_id, task_msg_id, "reject", user_cache, admin_name)
+
+                    # Сообщение сотруднику
+                    bot.send_message(
+                        user_id,
+                        "❌ Фото не принято. Пожалуйста, переделайте задачу и отправьте новое фото, ответив на сообщение с задачей.",
+                        parse_mode="HTML",
+                        reply_to_message_id=task_msg_id
+                    )
+
+                    # Комментарий
+                    bot.send_message(
+                        user_id,
+                        f"💬 Комментарий модератора:\n<blockquote>{comment_text}</blockquote>",
+                        parse_mode="HTML"
+                    )
+
+                    # ❌ Удаляем inline-кнопки у фото
+                    try:
+                        bot.edit_message_reply_markup(
+                            chat_id=config.control_chat_id,
+                            message_id=replied_msg_id,
+                            reply_markup=None
+                        )
+                    except Exception as e:
+                        print(f"⚠ Не удалось удалить клавиатуру у фото: {e}")
+
+                    # ✅ Подтверждение в чат контроля
+                    try:
+                        bot.send_message(
+                            config.control_chat_id,
+                            "✅ Комментарий отправлен исполнителю.",
+                            parse_mode="HTML",
+                            reply_to_message_id=message.message_id
+                        )
+                    except Exception as e:
+                        print(f"⚠ Не удалось отправить подтверждение в чат: {e}")
+
+                    return
