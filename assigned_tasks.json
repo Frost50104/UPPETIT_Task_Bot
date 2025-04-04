@@ -1,55 +1,11 @@
 {
   "854825784": [
     {
-      "task_text": "Ежедневная задача для группы 1",
-      "status": "не выполнена",
-      "message_id": 5644,
-      "assigned_at": "2025-04-04T14:37:04.170188",
-      "control_msg_id": null
-    },
-    {
-      "task_text": "Еженедельная задача для группы 1",
-      "status": "не выполнена",
-      "message_id": 5654,
-      "assigned_at": "2025-04-04T14:38:19.350072",
-      "control_msg_id": null
-    },
-    {
-      "task_text": "Ежемесячная задача для группы 1",
-      "status": "не выполнена",
-      "message_id": 5675,
-      "assigned_at": "2025-04-04T14:40:11.479484",
-      "control_msg_id": null
-    },
-    {
-      "task_text": "Тест неделя",
-      "status": "не выполнена",
-      "message_id": 5679,
-      "assigned_at": "2025-04-04T14:40:25.369676",
-      "control_msg_id": null
-    }
-  ],
-  "6691368671": [
-    {
-      "task_text": "Тест Тест 7",
-      "status": "не выполнена",
-      "message_id": 5647,
-      "assigned_at": "2025-04-04T14:37:19.224885",
-      "control_msg_id": null
-    },
-    {
-      "task_text": "Тест 1",
-      "status": "не выполнена",
-      "message_id": 5657,
-      "assigned_at": "2025-04-04T14:38:31.380689",
-      "control_msg_id": null
-    },
-    {
-      "task_text": "Тест неделя",
-      "status": "не выполнена",
-      "message_id": 5678,
-      "assigned_at": "2025-04-04T14:40:25.260929",
-      "control_msg_id": null
+      "task_text": "Тест пинания",
+      "status": "выполнена",
+      "message_id": 5809,
+      "assigned_at": "2025-04-04T15:13:01.595315",
+      "control_msg_id": 5820
     }
   ]
 }
