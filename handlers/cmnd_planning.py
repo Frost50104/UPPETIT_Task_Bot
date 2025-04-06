@@ -167,7 +167,7 @@ def handle_cmnd_planning(bot, is_admin, task_data):
 
         keyboard.add(
             InlineKeyboardButton("✅ Сохранить задачу", callback_data="save_task"),
-            InlineKeyboardButton("❌ Отмена", callback_data="cancel_task")
+            InlineKeyboardButton("❌ Отмена", callback_data="cancel_planning_task")
         )
 
         if rtype == "groups":
@@ -268,12 +268,21 @@ def handle_cmnd_planning(bot, is_admin, task_data):
         bot.send_message(cid, "✅ Задача добавлена в план.")
         show_tasks(cid)
 
-    @bot.callback_query_handler(func=lambda call: call.data == "cancel_task")
-    def cancel_task(call):
+    @bot.callback_query_handler(func=lambda call: call.data == "cancel_planning_task")
+    def cancel_planning_task(call):
         cid = call.message.chat.id
-        task_data.pop(cid, None)
+        state = task_data.get(cid, {}).get("state")
+
         bot.edit_message_reply_markup(cid, call.message.message_id, reply_markup=None)
-        bot.send_message(cid, "🚫 Создание задачи отменено.")
+
+        if state in ["adding_text", "adding_datetime", "choosing_type",
+                     "editing", "editing_text", "editing_datetime"]:
+            task_data.pop(cid, None)
+            bot.send_message(cid, "🚫 Действие отменено.")
+            show_tasks(cid)
+        else:
+            bot.send_message(cid, "🚫 Действие отменено.")
+            task_data.pop(cid, None)
 
     # === УДАЛЕНИЕ ===
     @bot.callback_query_handler(func=lambda call: call.data == "planning_delete")
@@ -336,7 +345,7 @@ def handle_cmnd_planning(bot, is_admin, task_data):
             InlineKeyboardButton("📅 Дата и время", callback_data="edit_field|datetime"),
             InlineKeyboardButton("👥 Получатели", callback_data="edit_field|recipients")
         )
-        keyboard.add(InlineKeyboardButton("🔙 Отмена", callback_data="cancel_task"))
+        keyboard.add(InlineKeyboardButton("🔙 Отмена", callback_data="cancel_planning_task"))
 
         bot.edit_message_reply_markup(cid, call.message.message_id, reply_markup=None)
         bot.send_message(cid, "Что нужно изменить?", reply_markup=keyboard)
