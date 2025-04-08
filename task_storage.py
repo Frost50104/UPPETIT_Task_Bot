@@ -75,9 +75,15 @@ def log_task_action(user_id, message_id, action, user_cache=None, admin_name=Non
     # Получаем имя исполнителя
     display_name = uid_str
     if user_cache:
-        user_data = user_cache.get(uid_str) or user_cache.get(uid_int)
-        if user_data:
-            display_name = user_data.get("first_name") or user_data.get("username") or uid_str
+        try:
+            if callable(user_cache):
+                user_data = user_cache(user_id)
+            else:
+                user_data = user_cache.get(uid_str) or user_cache.get(uid_int)
+            if user_data:
+                display_name = user_data.get("first_name") or user_data.get("username") or uid_str
+        except Exception as e:
+            print(f"⚠ Ошибка при получении данных пользователя из кэша: {e}")
 
     # Ищем текст задачи
     task_text = None

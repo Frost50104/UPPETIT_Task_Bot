@@ -4,6 +4,7 @@ import config
 import re
 import telebot
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
+from users_cache import build_user_cache, get_user_from_cache
 
 
 def handle_cmnd_delete_user(bot, is_admin, task_data):
@@ -95,13 +96,13 @@ def handle_cmnd_delete_user(bot, is_admin, task_data):
 
         keyboard = InlineKeyboardMarkup()
         for user_id in employee_list:
-            try:
-                user = bot.get_chat(user_id)
-                username = f"@{user.username}" if user.username else "Без username"
-                first_name = user.first_name or "Без имени"
+            user = get_user_from_cache(user_id)
+            if user and user["first_name"]:
+                username = f"@{user['username']}" if user['username'] else "Без username"
+                first_name = user["first_name"]
                 display_text = f"👤 {first_name} ({username})"
-            except telebot.apihelper.ApiTelegramException:
-                display_text = f"❌ ID: {user_id} (не найден)"
+            else:
+                display_text = f"❌ ID: {user_id} (не найден в кэше)"
 
             keyboard.add(InlineKeyboardButton(display_text, callback_data=f"delete_user_{user_id}"))
 
@@ -215,6 +216,7 @@ def handle_cmnd_delete_user(bot, is_admin, task_data):
             file.writelines(new_config_content)
 
         importlib.reload(config)
+        build_user_cache()  # 🔁 Обновляем кэш после изменения config
 
         bot.send_message(
             chat_id,

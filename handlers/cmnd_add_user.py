@@ -4,7 +4,7 @@ import re
 import importlib
 import config
 from bot_instance import bot, is_admin, task_data
-
+from users_cache import build_user_cache, get_user_from_cache
 
 def handle_cmnd_add_user(bot, is_admin, task_data):
     """Регистрация обработчиков команды /add_user"""
@@ -143,10 +143,10 @@ def handle_cmnd_add_user(bot, is_admin, task_data):
                     existing_ids_list = []
 
                 if new_user_id in existing_ids_list:
-                    try:
-                        user_info = bot.get_chat(new_user_id)
-                        user_name = user_info.first_name
-                    except Exception:
+                    user_info = get_user_from_cache(new_user_id)
+                    if user_info and user_info["first_name"]:
+                        user_name = user_info["first_name"]
+                    else:
                         user_name = f"ID {new_user_id}"
                     bot.send_message(chat_id, f"⚠ Пользователь <b>{user_name}</b> уже в группе {group_name}.",
                                      parse_mode="HTML")
@@ -173,13 +173,12 @@ def handle_cmnd_add_user(bot, is_admin, task_data):
         importlib.reload(config)
 
         # 🔁 Обновляем кэш пользователей
-        from users_cache import build_user_cache
         build_user_cache()
 
-        try:
-            user_info = bot.get_chat(new_user_id)
-            user_name = user_info.first_name
-        except Exception:
+        user_info = get_user_from_cache(new_user_id)
+        if user_info and user_info["first_name"]:
+            user_name = user_info["first_name"]
+        else:
             user_name = f"ID {new_user_id}"
 
         bot.edit_message_text(

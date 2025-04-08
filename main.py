@@ -35,6 +35,7 @@ from handlers.cmnd_arbeiten import handle_cmnd_arbeiten
 from handlers.cmnd_show_log import handle_cmnd_show_log
 from handlers.cmnd_clear_log import handle_cmnd_clear_log
 from handlers.cmnd_planning import handle_cmnd_planning
+from users_cache import build_user_cache
 
 
 
@@ -43,13 +44,6 @@ from handlers.cmnd_planning import handle_cmnd_planning
 # Создание бота
 bot = telebot.TeleBot(config.TOKEN)
 
-# Подгрузка user_cache.json
-try:
-    with open("user_cache.json", "r", encoding="utf-8") as f:
-        user_cache = json.load(f)
-except FileNotFoundError:
-    user_cache = {}
-
 # ========= Функция экранирования MarkdownV2 =========
 def escape_markdown_v2(text):
     """Экранирует специальные символы для MarkdownV2"""
@@ -57,6 +51,7 @@ def escape_markdown_v2(text):
     return "".join(f"\\{char}" if char in special_chars else char for char in text)
 
 # ========= Скрипты =========
+build_user_cache()  # Загружаем кэш в память
 restart_scheduler(bot) # перезапуск планировщика
 start_scheduler_thread() # фоновый процесс планировщика
 
@@ -79,13 +74,13 @@ handle_cmnd_update_user_cache(bot, is_admin) # обновление кэша с�
 handle_cmnd_bot_users(bot, is_admin) # команда /bot_users
 handle_cmnd_all_task(bot, is_admin, task_data) # команда /all_task
 handle_cmnd_show_schedule(bot, is_admin) # команда /show_schedule
-handle_photo_submission(bot, user_cache) # работа с фото в контрольном чате
+handle_photo_submission(bot) # работа с фото в контрольном чате
 handle_cmnd_auto_send(bot, is_admin, lambda: restart_scheduler(bot)) # команда /auto_send
 handle_cmnd_set_time(bot, is_admin, lambda: restart_scheduler(bot)) # команда /set_time
 handle_cmnd_set_month(bot, is_admin, lambda: restart_scheduler(bot)) # команда /set_month
 handle_cmnd_set_day(bot, is_admin, lambda: restart_scheduler(bot)) # команда /set_day
 handle_cmnd_auto_send_weekly(bot, is_admin, lambda: restart_scheduler(bot)) # команда /auto_send_weekly
-handle_cmnd_tasks_list(bot, is_admin, user_cache)
+handle_cmnd_tasks_list(bot, is_admin)
 handle_cmnd_clear_tasks_list(bot, is_admin)
 handle_cmnd_clear_all_tasks_list(bot, is_admin)
 handle_cmnd_arbeiten(bot, is_admin)
