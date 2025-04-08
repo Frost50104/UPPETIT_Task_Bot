@@ -158,6 +158,13 @@ def handle_cmnd_delete_user(bot, is_admin, task_data):
             bot.send_message(chat_id, "⚠ Ошибка: группа не найдена.")
             return
 
+        # ✅ Получаем first_name ДО удаления
+        user = get_user_from_cache(user_id)
+        if user and user.get("first_name"):
+            user_display = user["first_name"]
+        else:
+            user_display = str(user_id)
+
         # Убираем inline-кнопки
         bot.edit_message_reply_markup(chat_id, call.message.message_id, reply_markup=None)
 
@@ -218,9 +225,10 @@ def handle_cmnd_delete_user(bot, is_admin, task_data):
         importlib.reload(config)
         build_user_cache()  # 🔁 Обновляем кэш после изменения config
 
+
         bot.send_message(
             chat_id,
-            f"✅ Пользователь с ID <b>{user_id}</b> удален из группы <b>{group_name}</b>!",
+            f"✅ Пользователь <b>{user_display}</b> удален из группы <b>{group_name}</b>!",
             parse_mode="HTML"
         )
 
