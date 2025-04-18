@@ -1,6 +1,7 @@
 from task_storage import load_tasks
+from users_cache import get_user_from_cache
 
-def handle_cmnd_tasks_list(bot, is_admin, user_cache):
+def handle_cmnd_tasks_list(bot, is_admin):
     @bot.message_handler(commands=["tasks_list"])
     def show_tasks_list(message):
         if not is_admin(message.from_user.id):
@@ -32,7 +33,7 @@ def handle_cmnd_tasks_list(bot, is_admin, user_cache):
             block = f"📋 <b>{task_text}</b>\n📅 <i>{date}</i>\n<b>Исполнители:</b>\n"
             for user in users:
                 uid = user["user_id"]
-                user_data = user_cache.get(uid) or user_cache.get(str(uid)) or {}
+                user_data = get_user_from_cache(uid) or {}
                 name = user_data.get("first_name") or user_data.get("username") or f"ID: {uid}"
                 status = user["status"]
                 reminder_flag = " ⏰" if user["reminder"] else ""

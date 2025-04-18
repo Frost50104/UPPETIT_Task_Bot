@@ -31,7 +31,7 @@ def handle_cmnd_all_task(bot, is_admin, task_data):
         for performers, tasks_text in config.control_panel.items():
             for performer in performers:
                 try:
-                    msg = bot.send_message(performer, f"📌 *Новое задание:*\n{task_text}", parse_mode="HTML")
+                    msg = bot.send_message(performer, f"📌 <b>Новое задание:</b>\n{task_text}", parse_mode="HTML")
                     assign_task(performer, task_text, msg.message_id)
                     task_data[performer] = {"task_text": task_text}
                     total_sent += 1  # Увеличиваем счетчик

@@ -74,7 +74,7 @@ def handle_cmnd_set_day(bot, is_admin, restart_scheduler):
             # Преобразуем день недели
             day = day_translation.get(day_input, day_input)
             if day not in ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]:
-                bot.send_message(message.chat.id, f"⚠ Неверный день недели: {day_input}")
+                bot.send_message(message.chat.id, f"⚠ Неверный день недели: {day_input}, чтобы начать сначала используйте /set_day")
                 return
 
             if not re.match(r"^\d{1,2}:\d{2}$", time_part):

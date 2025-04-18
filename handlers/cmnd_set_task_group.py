@@ -31,17 +31,47 @@ def handle_cmnd_set_task_group(bot, is_admin, task_data, daily_tasks, weekly_tas
         task_type = call.data.replace("select_task_type_", "")  # daily / weekly / monthly
         bot.answer_callback_query(call.id)
 
+        # ❌ Удаляем клавиатуру у исходного сообщения
+        bot.edit_message_reply_markup(
+            chat_id=call.message.chat.id,
+            message_id=call.message.message_id,
+            reply_markup=None
+        )
+
+        # 🔄 Обновим config (гарантированно получим свежие данные)
+        importlib.reload(config)
+
+        # Выбираем нужный словарь из config
+        task_dict = {
+            "daily": config.daily_tasks,
+            "weekly": config.weekly_tasks,
+            "monthly": config.monthly_tasks
+        }[task_type]
+
+        # Сформируем сообщение
+        message_lines = [f"<b>Текущие задания для {task_type} рассылки:</b>"]
+        for i, (group_name, _) in enumerate(config.performers.items(), start=1):
+            key = f"task_group_{i}"
+            task_text = task_dict.get(key, "❌ Нет задания")
+            message_lines.append(f"<b>{group_name}</b>:\n{task_text}\n")
+
+        bot.send_message(
+            call.message.chat.id,
+            "\n".join(message_lines),
+            parse_mode="HTML"
+        )
+
+        # Клавиатура выбора группы
         keyboard = InlineKeyboardMarkup(row_width=2)
         for i, group_name in enumerate(config.performers.keys(), start=1):
-            callback_data = f"edit_task_group_{task_type}_{i}"  # безопасно!
+            callback_data = f"edit_task_group_{task_type}_{i}"
             keyboard.add(InlineKeyboardButton(group_name, callback_data=callback_data))
 
         keyboard.add(InlineKeyboardButton("❌ Отмена", callback_data="cancel_task_group"))
 
-        bot.edit_message_text(
+        bot.send_message(
+            call.message.chat.id,
             "Выберите группу, для которой нужно изменить задание:",
-            chat_id=call.message.chat.id,
-            message_id=call.message.message_id,
             reply_markup=keyboard
         )
 

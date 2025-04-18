@@ -5,11 +5,16 @@ import config
 import auto_send_tasks_on_schedule
 import datetime
 from task_storage import assign_task
+from send_planned_tasks import send_scheduled_tasks
+from logger import log_error, log_bot_restart
 
 # === Перезапуск планировщика ===
 def restart_scheduler(bot):
     importlib.reload(config)
     schedule.clear()
+
+    # Логируем перезапуск планировщика
+    log_bot_restart()
 
     # 🔁 Ежедневные задачи
     if config.status_work_time == "on":
@@ -28,6 +33,10 @@ def restart_scheduler(bot):
             # Каждый день в указанное время запускаем проверку
             schedule.every().day.at(time_str).do(check_and_send_monthly, bot, day)
 
+    # ⏰ Каждую минуту — проверка запланированных задач
+    schedule.every(1).minutes.do(send_scheduled_tasks, bot)
+
+
     print(f"✅ Планировщик перезапущен!")
     print(f"📅 Ежедневно: {config.work_time if config.status_work_time == 'on' else '❌'}")
     print(f"🗓 Еженедельно: {config.weekly_schedule if config.status_weekly == 'on' else '❌'}")
@@ -44,7 +53,9 @@ def send_weekly_tasks(bot):
                 msg = bot.send_message(user_id, f"📌 <b>Еженедельная задача:</b>\n{task_text}", parse_mode="HTML")
                 assign_task(user_id, task_text, msg.message_id)
             except Exception as e:
-                print(f"⚠ Ошибка при отправке еженедельной задачи пользователю {user_id}: {e}")
+                error_msg = f"⚠ Ошибка при отправке еженедельной задачи пользователю {user_id}: {e}"
+                print(error_msg)
+                log_error(e, f"при отправке еженедельной задачи пользователю {user_id}")
 
 # === Ежемесячные задачи (с проверкой дня) ===
 def check_and_send_monthly(bot, target_day):
@@ -62,4 +73,6 @@ def send_monthly_tasks(bot):
                 msg = bot.send_message(user_id, f"📌 <b>Ежемесячная задача:</b>\n{task_text}", parse_mode="HTML")
                 assign_task(user_id, task_text, msg.message_id)
             except Exception as e:
-                print(f"⚠ Ошибка при отправке ежемесячной задачи пользователю {user_id}: {e}")
+                error_msg = f"⚠ Ошибка при отправке ежемесячной задачи пользователю {user_id}: {e}"
+                print(error_msg)
+                log_error(e, f"при отправке ежемесячной задачи пользователю {user_id}")

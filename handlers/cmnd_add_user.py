@@ -4,7 +4,8 @@ import re
 import importlib
 import config
 from bot_instance import bot, is_admin, task_data
-
+from users_cache import build_user_cache, get_user_from_cache
+from logger import log_action
 
 def handle_cmnd_add_user(bot, is_admin, task_data):
     """Регистрация обработчиков команды /add_user"""
@@ -15,6 +16,14 @@ def handle_cmnd_add_user(bot, is_admin, task_data):
         if not is_admin(message.from_user.id):
             bot.send_message(message.chat.id, "⛔ У вас нет прав для добавления сотрудников.")
             return
+
+        # Log the action
+        log_action(
+            user_id=message.from_user.id,
+            action="Запустил процесс добавления пользователя",
+            details="Команда /add_user",
+            admin_name=message.from_user.first_name
+        )
 
         keyboard = InlineKeyboardMarkup()
         keyboard.add(
@@ -50,6 +59,9 @@ def handle_cmnd_add_user(bot, is_admin, task_data):
         for index, group_name in group_index_map.items():
             keyboard.add(InlineKeyboardButton(group_name[:30], callback_data=f"select_group_{index}"))
 
+        # Добавляем кнопку "Отмена" под всеми группами
+        keyboard.add(InlineKeyboardButton("❌ Отмена", callback_data="cancel_group_selection"))
+
         bot.edit_message_text(
             "Выберите группу, в которую нужно добавить нового сотрудника:",
             call.message.chat.id,
@@ -81,6 +93,14 @@ def handle_cmnd_add_user(bot, is_admin, task_data):
         # Сохраняем выбранную группу
         task_data[chat_id]["selected_group"] = group_name
 
+        # Log the action
+        log_action(
+            user_id=call.from_user.id,
+            action="Выбрал группу для добавления пользователя",
+            details=f"Группа: {group_name}",
+            admin_name=call.from_user.first_name
+        )
+
         bot.edit_message_text(
             f"Вы выбрали группу <b>{group_name}</b>\n\nУкажите ID сотрудника:",
             chat_id,
@@ -106,6 +126,9 @@ def handle_cmnd_add_user(bot, is_admin, task_data):
             return
 
         group_name = task_data[chat_id]["selected_group"]
+
+        # 🔄 Уведомляем о процессе
+        loading_msg = bot.send_message(chat_id, "🔄 Обновление базы пользователей...", parse_mode="HTML")
 
         # Читаем config.py
         config_file = "config.py"
@@ -137,10 +160,10 @@ def handle_cmnd_add_user(bot, is_admin, task_data):
                     existing_ids_list = []
 
                 if new_user_id in existing_ids_list:
-                    try:
-                        user_info = bot.get_chat(new_user_id)
-                        user_name = user_info.first_name
-                    except Exception:
+                    user_info = get_user_from_cache(new_user_id)
+                    if user_info and user_info["first_name"]:
+                        user_name = user_info["first_name"]
+                    else:
                         user_name = f"ID {new_user_id}"
                     bot.send_message(chat_id, f"⚠ Пользователь <b>{user_name}</b> уже в группе {group_name}.",
                                      parse_mode="HTML")
@@ -167,19 +190,45 @@ def handle_cmnd_add_user(bot, is_admin, task_data):
         importlib.reload(config)
 
         # 🔁 Обновляем кэш пользователей
-        from users_cache import build_user_cache
         build_user_cache()
 
-        try:
-            user_info = bot.get_chat(new_user_id)
-            user_name = user_info.first_name
-        except Exception:
+        user_info = get_user_from_cache(new_user_id)
+        if user_info and user_info["first_name"]:
+            user_name = user_info["first_name"]
+        else:
             user_name = f"ID {new_user_id}"
 
-        bot.send_message(
-            chat_id,
-            f"✅ Пользователь <b>{user_name}</b> добавлен в группу <b>{group_name}</b>!\n\n🔄 База пользователей обновлена.",
+        # Log the action
+        log_action(
+            user_id=message.from_user.id,
+            action="Добавил пользователя в группу",
+            details=f"Пользователь: {user_name} (ID: {new_user_id}), Группа: {group_name}",
+            admin_name=message.from_user.first_name
+        )
+
+        bot.edit_message_text(
+            f"✅ Пользователь <b>{user_name}</b> добавлен в группу <b>{group_name}</b>!\n\n✅ База пользователей обновлена.",
+            chat_id=chat_id,
+            message_id=loading_msg.message_id,
             parse_mode="HTML"
         )
 
         del task_data[chat_id]
+
+    @bot.callback_query_handler(func=lambda call: call.data == "cancel_group_selection")
+    def cancel_group_selection(call):
+        if not is_admin(call.from_user.id):
+            bot.answer_callback_query(call.id, "⛔ У вас нет прав.")
+            return
+
+        bot.edit_message_text(
+            "❌ Добавление пользователя отменено.",
+            chat_id=call.message.chat.id,
+            message_id=call.message.message_id,
+            parse_mode="HTML"
+        )
+
+        # Очищаем временные данные, если есть
+        task_data.pop(call.message.chat.id, None)
+
+        bot.answer_callback_query(call.id)

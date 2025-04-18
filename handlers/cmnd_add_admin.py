@@ -4,6 +4,7 @@ import config
 import re
 import telebot
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
+from logger import log_action
 
 def handle_cmnd_add_admin(bot, is_admin, task_data):
     """Регистрация обработчиков команды /add_admin"""
@@ -119,6 +120,14 @@ def handle_cmnd_add_admin(bot, is_admin, task_data):
 
         # Перезагружаем config.py, чтобы бот сразу видел изменения
         importlib.reload(config)
+
+        # Log the action with the added admin ID
+        log_action(
+            user_id=message.from_user.id,
+            action="Добавил нового администратора",
+            details=f"ID добавленного администратора: {new_admin_id}",
+            admin_name=message.from_user.first_name
+        )
 
         bot.send_message(
             message.chat.id,
