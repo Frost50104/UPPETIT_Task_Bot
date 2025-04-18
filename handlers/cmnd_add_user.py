@@ -5,6 +5,7 @@ import importlib
 import config
 from bot_instance import bot, is_admin, task_data
 from users_cache import build_user_cache, get_user_from_cache
+from logger import log_action
 
 def handle_cmnd_add_user(bot, is_admin, task_data):
     """Регистрация обработчиков команды /add_user"""
@@ -15,6 +16,14 @@ def handle_cmnd_add_user(bot, is_admin, task_data):
         if not is_admin(message.from_user.id):
             bot.send_message(message.chat.id, "⛔ У вас нет прав для добавления сотрудников.")
             return
+
+        # Log the action
+        log_action(
+            user_id=message.from_user.id,
+            action="Запустил процесс добавления пользователя",
+            details="Команда /add_user",
+            admin_name=message.from_user.first_name
+        )
 
         keyboard = InlineKeyboardMarkup()
         keyboard.add(
@@ -83,6 +92,14 @@ def handle_cmnd_add_user(bot, is_admin, task_data):
 
         # Сохраняем выбранную группу
         task_data[chat_id]["selected_group"] = group_name
+
+        # Log the action
+        log_action(
+            user_id=call.from_user.id,
+            action="Выбрал группу для добавления пользователя",
+            details=f"Группа: {group_name}",
+            admin_name=call.from_user.first_name
+        )
 
         bot.edit_message_text(
             f"Вы выбрали группу <b>{group_name}</b>\n\nУкажите ID сотрудника:",
@@ -180,6 +197,14 @@ def handle_cmnd_add_user(bot, is_admin, task_data):
             user_name = user_info["first_name"]
         else:
             user_name = f"ID {new_user_id}"
+
+        # Log the action
+        log_action(
+            user_id=message.from_user.id,
+            action="Добавил пользователя в группу",
+            details=f"Пользователь: {user_name} (ID: {new_user_id}), Группа: {group_name}",
+            admin_name=message.from_user.first_name
+        )
 
         bot.edit_message_text(
             f"✅ Пользователь <b>{user_name}</b> добавлен в группу <b>{group_name}</b>!\n\n✅ База пользователей обновлена.",
