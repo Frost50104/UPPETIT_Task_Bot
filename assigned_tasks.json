@@ -27,6 +27,20 @@
       "message_id": 6932,
       "assigned_at": "2025-04-18T14:16:25.140149",
       "control_msg_id": null
+    },
+    {
+      "task_text": "Задача для ежедневной РАССЫЛКИ 1",
+      "status": "не выполнена",
+      "message_id": 7029,
+      "assigned_at": "2025-05-02T13:03:16.566828",
+      "control_msg_id": null
+    },
+    {
+      "task_text": "Ежемесячная 11",
+      "status": "не выполнена",
+      "message_id": 7116,
+      "assigned_at": "2025-05-02T13:24:11.139435",
+      "control_msg_id": null
     }
   ],
   "6691368671": [
@@ -35,6 +49,20 @@
       "status": "не выполнена",
       "message_id": 6939,
       "assigned_at": "2025-04-18T14:16:43.538310",
+      "control_msg_id": null
+    },
+    {
+      "task_text": "Задача для ежедневной РАССЫЛКИ 1",
+      "status": "не выполнена",
+      "message_id": 7030,
+      "assigned_at": "2025-05-02T13:03:33.321305",
+      "control_msg_id": null
+    },
+    {
+      "task_text": "Задача для ежедневной РАССЫЛКИ 4",
+      "status": "не выполнена",
+      "message_id": 7062,
+      "assigned_at": "2025-05-02T13:10:09.899621",
       "control_msg_id": null
     }
   ]
