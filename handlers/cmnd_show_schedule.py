@@ -32,6 +32,42 @@ def format_tasks_and_groups(tasks_dict):
     if not tasks_dict:
         return "Нет задач"
 
+    # Получаем уникальные задачи
+    unique_tasks = set(tasks_dict.values())
+
+    # Если задач нет, возвращаем сообщение
+    if not unique_tasks:
+        return "Нет задач"
+
+    # Если задача одна для всех групп, выводим её один раз
+    if len(unique_tasks) == 1:
+        task_text = next(iter(unique_tasks))
+
+        # Формируем список групп получателей
+        groups_info = []
+        for group_name in tasks_dict.keys():
+            # Получаем название группы в читаемом формате
+            readable_group_name = group_name.replace("task_group_", "Группа ")
+
+            # Получаем список ID получателей для этой группы
+            recipients = config.performers_by_group.get(group_name, [])
+
+            # Находим название группы из словаря performers
+            group_display_name = None
+            for name, ids in config.performers.items():
+                if set(ids) == set(recipients):
+                    group_display_name = name
+                    break
+
+            group_info = group_display_name or readable_group_name
+            groups_info.append(f"• <b>{group_info}</b> ({len(recipients)} получателей)")
+
+        # Формируем результат: сначала задача, потом список групп
+        result = f"<b>Задача:</b> {task_text}\n\n<b>Группы получателей:</b>\n" + '\n'.join(groups_info)
+        return result
+
+    # Если задачи разные для разных групп (что не должно быть по условию задачи),
+    # используем старый формат вывода
     result = []
     for group_name, task_text in tasks_dict.items():
         # Получаем название группы в читаемом формате
@@ -72,18 +108,15 @@ def handle_cmnd_show_schedule(bot, is_admin):
             message.chat.id,
             text=f'''
 🗓 <b>Ежедневная рассылка:</b> {config.status_work_time}
-Время: {', '.join(config.work_time) if config.work_time else '—'}
-Задачи и группы получателей:
+Время: {', '.join(config.work_time) if config.work_time else '—'}\n
 {daily_tasks_text}
 
-📆 <b>Еженедельная рассылка:</b> {config.status_weekly}
+📆 <b>Еженедельная рассылка:</b> {config.status_weekly}\n
 Дни и время: {weekly_text}
-Задачи и группы получателей:
 {weekly_tasks_text}
 
-📅 <b>Ежемесячная рассылка:</b> {config.status_monthly}
+📅 <b>Ежемесячная рассылка:</b> {config.status_monthly}\n
 Даты и время: {monthly_text}
-Задачи и группы получателей:
 {monthly_tasks_text}
 ''',
             parse_mode='HTML'
