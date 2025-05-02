@@ -27,6 +27,31 @@ def translate_monthly_schedule(monthly_schedule):
         result.append(f"{day} числа в {time}")
     return '\n'.join(result) if result else '—'
 
+def format_tasks_and_groups(tasks_dict):
+    """Форматирует словарь задач и групп получателей"""
+    if not tasks_dict:
+        return "Нет задач"
+
+    result = []
+    for group_name, task_text in tasks_dict.items():
+        # Получаем название группы в читаемом формате
+        readable_group_name = group_name.replace("task_group_", "Группа ")
+
+        # Получаем список ID получателей для этой группы
+        recipients = config.performers_by_group.get(group_name, [])
+
+        # Находим название группы из словаря performers
+        group_display_name = None
+        for name, ids in config.performers.items():
+            if set(ids) == set(recipients):
+                group_display_name = name
+                break
+
+        group_info = group_display_name or readable_group_name
+        result.append(f"• <b>{group_info}</b>: {task_text} ({len(recipients)} получателей)")
+
+    return '\n'.join(result) if result else "Нет задач"
+
 def handle_cmnd_show_schedule(bot, is_admin):
     """Регистрация обработчика команды /show_schedule"""
     @bot.message_handler(commands=['show_schedule'])
@@ -38,17 +63,28 @@ def handle_cmnd_show_schedule(bot, is_admin):
         weekly_text = translate_weekly_schedule(config.weekly_schedule)
         monthly_text = translate_monthly_schedule(config.monthly_schedule)
 
+        # Форматируем задачи и группы получателей
+        daily_tasks_text = format_tasks_and_groups(config.daily_tasks)
+        weekly_tasks_text = format_tasks_and_groups(config.weekly_tasks)
+        monthly_tasks_text = format_tasks_and_groups(config.monthly_tasks)
+
         bot.send_message(
             message.chat.id,
             text=f'''
 🗓 <b>Ежедневная рассылка:</b> {config.status_work_time}
 Время: {', '.join(config.work_time) if config.work_time else '—'}
-    
+Задачи и группы получателей:
+{daily_tasks_text}
+
 📆 <b>Еженедельная рассылка:</b> {config.status_weekly}
 Дни и время: {weekly_text}
-    
+Задачи и группы получателей:
+{weekly_tasks_text}
+
 📅 <b>Ежемесячная рассылка:</b> {config.status_monthly}
 Даты и время: {monthly_text}
+Задачи и группы получателей:
+{monthly_tasks_text}
 ''',
             parse_mode='HTML'
         )
