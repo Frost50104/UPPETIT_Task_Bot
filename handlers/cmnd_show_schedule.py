@@ -111,12 +111,12 @@ def handle_cmnd_show_schedule(bot, is_admin):
 Время: {', '.join(config.work_time) if config.work_time else '—'}\n
 {daily_tasks_text}
 
-📆 <b>Еженедельная рассылка:</b> {config.status_weekly}\n
-Дни и время: {weekly_text}
+📆 <b>Еженедельная рассылка:</b> {config.status_weekly}
+Дни и время: {weekly_text}\n
 {weekly_tasks_text}
 
-📅 <b>Ежемесячная рассылка:</b> {config.status_monthly}\n
-Даты и время: {monthly_text}
+📅 <b>Ежемесячная рассылка:</b> {config.status_monthly}
+Даты и время: {monthly_text}\n
 {monthly_tasks_text}
 ''',
             parse_mode='HTML'

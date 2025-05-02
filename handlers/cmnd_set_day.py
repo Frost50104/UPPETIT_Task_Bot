@@ -112,7 +112,4 @@ def handle_cmnd_set_day(bot, is_admin, restart_scheduler):
                 except Exception as e:
                     print(f"⚠ Ошибка: {e}")
 
-    # Еженедельная рассылка
-    if config.status_weekly == "on":
-        for day, time_str in config.weekly_schedule:
-            getattr(schedule.every(), day).at(time_str).do(send_weekly_tasks)
+    # Еженедельная рассылка настраивается в restart_scheduler.py
