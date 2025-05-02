@@ -1,86 +1,1608 @@
-[2025-04-18 13:42:07] 854825784 - Очистил все логи (админ: Пётр)
-[2025-04-18 13:48:28] 854825784 - Выполнил команду /all_logs - Команда: /all_logs (админ: Пётр)
-[2025-04-18 13:48:33] 854825784 - Выполнил команду /auto_send - Команда: /auto_send (админ: Пётр)
-[2025-04-18 13:48:35] 854825784 - Выполнил команду /auto_send - Команда: change_auto_send (админ: Пётр)
-[2025-04-18 13:48:36] 854825784 - Выполнил команду /all_logs - Команда: /all_logs (админ: Пётр)
-[2025-04-18 13:48:54] 854825784 - Выполнил команду /bot_users - Команда: /bot_users (админ: Пётр)
-[2025-04-18 13:49:16] 854825784 - Выполнил команду /all_logs - Команда: /all_logs (админ: Пётр)
-[2025-04-18 13:49:26] 854825784 - Выполнил команду /start - Команда: /start (админ: Пётр)
-[2025-04-18 13:49:26] 854825784 - Запустил бота - Команда /start от Пётр (p_50104)
-[2025-04-18 13:49:29] 854825784 - Выполнил команду /all_logs - Команда: /all_logs (админ: Пётр)
-[2025-04-18 13:49:39] 854825784 - Выполнил команду /help - Команда: /help (админ: Пётр)
-[2025-04-18 13:49:43] 854825784 - Выполнил команду /all_logs - Команда: /all_logs (админ: Пётр)
-[2025-04-18 13:49:52] 854825784 - Выполнил команду /add_user - Команда: /add_user (админ: Пётр)
-[2025-04-18 13:49:52] 854825784 - Запустил процесс добавления пользователя - Команда /add_user (админ: Пётр)
-[2025-04-18 13:49:54] 854825784 - Выполнил команду /add_user - Команда: cancel_add_user (админ: Пётр)
-[2025-04-18 13:49:56] 854825784 - Выполнил команду /all_logs - Команда: /all_logs (админ: Пётр)
-[2025-04-18 13:50:12] 854825784 - Выполнил команду /add_user - Команда: /add_user (админ: Пётр)
-[2025-04-18 13:50:12] 854825784 - Запустил процесс добавления пользователя - Команда /add_user (админ: Пётр)
-[2025-04-18 13:50:13] 854825784 - Выполнил команду /add_user - Команда: confirm_add_user (админ: Пётр)
-[2025-04-18 13:50:16] 854825784 - Выполнил команду /add_user - Команда: select_group_6 (админ: Пётр)
-[2025-04-18 13:50:16] 854825784 - Выбрал группу для добавления пользователя - Группа: Точки с вкусной полкой. (админ: Пётр)
-[2025-04-18 13:50:33] 854825784 - Добавил пользователя в группу - Пользователь: Доставка UPPETIT (ID: 6691368671), Группа: Точки с вкусной полкой. (админ: Пётр)
-[2025-04-18 13:50:39] 854825784 - Выполнил команду /all_logs - Команда: /all_logs (админ: Пётр)
-[2025-04-18 13:52:01] 854825784 - Выполнил команду /delete_user - Команда: /delete_user (админ: Пётр)
-[2025-04-18 13:52:03] 854825784 - Выполнил команду /delete_user - Команда: cancel_delete_user (админ: Пётр)
-[2025-04-18 13:52:06] 854825784 - Выполнил команду /all_logs - Команда: /all_logs (админ: Пётр)
-[2025-04-18 13:52:10] 854825784 - Выполнил команду /delete_user - Команда: /delete_user (админ: Пётр)
-[2025-04-18 13:52:12] 854825784 - Выполнил команду /delete_user - Команда: confirm_delete_user (админ: Пётр)
-[2025-04-18 13:52:13] 854825784 - Выполнил команду /delete_user - Команда: delete_group_6 (админ: Пётр)
-[2025-04-18 13:52:15] 854825784 - Выполнил команду /delete_user - Команда: delete_user_6691368671 (админ: Пётр)
-[2025-04-18 13:52:27] 854825784 - Выполнил команду /all_logs - Команда: /all_logs (админ: Пётр)
-[2025-04-18 13:53:08] 854825784 - Выполнил команду /admins - Команда: /admins (админ: Пётр)
-[2025-04-18 14:04:38] 854825784 - Выполнил команду /all_logs - Команда: /all_logs (админ: Пётр)
-[2025-04-18 14:04:43] 854825784 - Выполнил команду /add_admin - Команда: /add_admin (админ: Пётр)
-[2025-04-18 14:04:48] 854825784 - Выполнил команду /add_admin - Команда: confirm_add_admin (админ: Пётр)
-[2025-04-18 14:05:27] 854825784 - Выполнил команду /all_logs - Команда: /all_logs (админ: Пётр)
-[2025-04-18 14:05:49] 854825784 - Выполнил команду /add_admin - Команда: /add_admin (админ: Пётр)
-[2025-04-18 14:05:53] 854825784 - Выполнил команду /add_admin - Команда: cancel_add_admin (админ: Пётр)
-[2025-04-18 14:05:57] 854825784 - Выполнил команду /all_logs - Команда: /all_logs (админ: Пётр)
-[2025-04-18 14:08:40] 854825784 - Выполнил команду /all_logs - Команда: /all_logs (админ: Пётр)
-[2025-04-18 14:09:10] 854825784 - Выполнил команду /delete_user - Команда: /delete_user (админ: Пётр)
-[2025-04-18 14:09:12] 854825784 - Выполнил команду /delete_user - Команда: cancel_delete_user (админ: Пётр)
-[2025-04-18 14:09:14] 854825784 - Выполнил команду /delete_admin - Команда: /delete_admin (админ: Пётр)
-[2025-04-18 14:09:17] 854825784 - Выполнил команду /delete_admin - Команда: cancel_delete_admin (админ: Пётр)
-[2025-04-18 14:09:18] 854825784 - Выполнил команду /delete_admin - Команда: /delete_admin (админ: Пётр)
-[2025-04-18 14:09:19] 854825784 - Выполнил команду /delete_admin - Команда: confirm_delete_admin (админ: Пётр)
-[2025-04-18 14:09:24] 854825784 - Выполнил команду /delete_admin - Команда: delete_admin_6691368671 (админ: Пётр)
-[2025-04-18 14:09:35] 854825784 - Выполнил команду /all_logs - Команда: /all_logs (админ: Пётр)
-[2025-04-18 14:10:09] 854825784 - Выполнил команду /add_admin - Команда: /add_admin (админ: Пётр)
-[2025-04-18 14:10:16] 854825784 - Выполнил команду /add_admin - Команда: confirm_add_admin (админ: Пётр)
-[2025-04-18 14:10:21] 854825784 - Добавил нового администратора - ID добавленного администратора: 6691368671 (админ: Пётр)
-[2025-04-18 14:10:26] 854825784 - Выполнил команду /all_logs - Команда: /all_logs (админ: Пётр)
-[2025-04-18 14:10:46] 854825784 - Выполнил команду /group_task - Команда: /group_task (админ: Пётр)
-[2025-04-18 14:10:55] 854825784 - Выполнил команду /group_task - Команда: group_task_select|854825784|065742eb (админ: Пётр)
-[2025-04-18 14:10:57] 854825784 - Выполнил команду /group_task - Команда: group_task_send|854825784 (админ: Пётр)
-[2025-04-18 14:11:01] 854825784 - Выполнил команду /all_logs - Команда: /all_logs (админ: Пётр)
-[2025-04-18 14:11:39] 854825784 - Выполнил команду /user_task - Команда: /user_task (админ: Пётр)
-[2025-04-18 14:11:47] 854825784 - Выполнил команду /user_task - Команда: next_group|854825784|0 (админ: Пётр)
-[2025-04-18 14:11:48] 854825784 - Выполнил команду /user_task - Команда: next_group|854825784|1 (админ: Пётр)
-[2025-04-18 14:11:50] 854825784 - Выполнил команду /user_task - Команда: next_group|854825784|2 (админ: Пётр)
-[2025-04-18 14:11:54] 854825784 - Выполнил команду /user_task - Команда: next_group|854825784|3 (админ: Пётр)
-[2025-04-18 14:11:57] 854825784 - Выполнил команду /user_task - Команда: next_group|854825784|4 (админ: Пётр)
-[2025-04-18 14:11:59] 854825784 - Выполнил команду /user_task - Команда: select_employee|854825784|6691368671|5 (админ: Пётр)
-[2025-04-18 14:12:00] 854825784 - Выполнил команду /user_task - Команда: send_task|854825784 (админ: Пётр)
-[2025-04-18 14:14:06] 6691368671 - Выполнил команду /photo_submission - Команда: None (админ: Доставка UPPETIT)
-[2025-04-18 14:14:09] 854825784 - Выполнил команду /all_logs - Команда: /all_logs (админ: Пётр)
-[2025-04-18 14:14:47] 854825784 - Выполнил команду /photo_submission - Команда: reject_6906_6691368671_6903 (админ: Пётр)
-[2025-04-18 14:15:02] 6691368671 - Выполнил команду /photo_submission - Команда: None (админ: Доставка UPPETIT)
-[2025-04-18 14:15:04] 854825784 - Выполнил команду /photo_submission - Команда: accept_6914_6691368671_6903 (админ: Пётр)
-[2025-04-18 14:15:09] 854825784 - Выполнил команду /all_logs - Команда: /all_logs (админ: Пётр)
-[2025-04-18 14:15:22] 854825784 - Выполнил команду /tasks_list - Команда: /tasks_list (админ: Пётр)
-[2025-04-18 14:15:35] 854825784 - Выполнил команду /clear_tasks_list - Команда: /clear_tasks_list (админ: Пётр)
-[2025-04-18 14:15:37] 854825784 - Выполнил команду /clear_tasks_list - Команда: clear_tasks_confirm (админ: Пётр)
-[2025-04-18 14:15:39] 854825784 - Выполнил команду /all_logs - Команда: /all_logs (админ: Пётр)
-[2025-04-18 14:16:21] 854825784 - Выполнил команду /all_task - Команда: /all_task (админ: Пётр)
-[2025-04-18 14:16:31] 854825784 - Выполнил команду /tasks_list - Команда: /tasks_list (админ: Пётр)
-[2025-04-18 14:16:35] 854825784 - Выполнил команду /all_logs - Команда: /all_logs (админ: Пётр)
-[2025-04-18 14:16:49] 854825784 - Выполнил команду /all_logs - Команда: /all_logs (админ: Пётр)
-[2025-04-18 14:24:40] 854825784 - Выполнил команду /all_logs - Команда: /all_logs (админ: Пётр)
-[2025-04-18 14:24:53] СИСТЕМА - Бот был перезапущен
-[2025-04-18 14:24:53] СИСТЕМА - Бот был перезапущен
-[2025-04-18 14:24:53] 854825784 - Выполнил команду /all_logs - Команда: /all_logs (админ: Пётр)
-[2025-04-18 14:25:39] 854825784 - Выполнил команду /set_group_name - Команда: /set_group_name (админ: Пётр)
-[2025-04-18 14:25:40] 854825784 - Выполнил команду /set_group_name - Команда: cancel_set_group_name (админ: Пётр)
-[2025-04-18 14:25:45] 854825784 - Выполнил команду /my_id - Команда: /my_id (админ: Пётр)
-[2025-04-18 14:25:48] 854825784 - Выполнил команду /all_logs - Команда: /all_logs (админ: Пётр)
+[2025-05-02 13:39:22] 854825784 - Выполнил команду /all_logs - Команда: /all_logs (админ: Пётр)
+[2025-05-02 13:40:46] 854825784 - Выполнил команду /show_schedule - Команда: /show_schedule (админ: Пётр)
+[2025-05-02 13:43:27] СИСТЕМА - Бот был перезапущен
+[2025-05-02 13:43:27] СИСТЕМА - Бот был перезапущен
+[2025-05-02 13:43:27] 854825784 - Выполнил команду /show_schedule - Команда: /show_schedule (админ: Пётр)
+[2025-05-02 13:48:34] СИСТЕМА - Бот был перезапущен
+[2025-05-02 13:48:34] СИСТЕМА - Бот был перезапущен
+[2025-05-02 13:48:34] 854825784 - Выполнил команду /show_schedule - Команда: /show_schedule (админ: Пётр)
+[2025-05-02 13:49:50] СИСТЕМА - Бот был перезапущен
+[2025-05-02 13:49:50] СИСТЕМА - Бот был перезапущен
+[2025-05-02 13:49:50] 854825784 - Выполнил команду /show_schedule - Команда: /show_schedule (админ: Пётр)
+[2025-05-02 13:51:48] СИСТЕМА - Бот был перезапущен
+[2025-05-02 13:51:48] СИСТЕМА - Бот был перезапущен
+[2025-05-02 13:51:48] 854825784 - Выполнил команду /show_schedule - Команда: /show_schedule (админ: Пётр)
+[2025-05-02 13:52:27] СИСТЕМА - Бот был перезапущен
+[2025-05-02 13:52:27] СИСТЕМА - Бот был перезапущен
+[2025-05-02 13:52:27] 854825784 - Выполнил команду /show_schedule - Команда: /show_schedule (админ: Пётр)
+[2025-05-02 13:52:48] 854825784 - Выполнил команду /bot_users - Команда: /bot_users (админ: Пётр)
+[2025-05-02 13:53:03] 854825784 - Выполнил команду /add_user - Команда: /add_user (админ: Пётр)
+[2025-05-02 13:53:03] 854825784 - Запустил процесс добавления пользователя - Команда /add_user (админ: Пётр)
+[2025-05-02 13:53:05] 854825784 - Выполнил команду /add_user - Команда: confirm_add_user (админ: Пётр)
+[2025-05-02 13:53:06] 854825784 - Выполнил команду /add_user - Команда: select_group_6 (админ: Пётр)
+[2025-05-02 13:53:06] 854825784 - Выбрал группу для добавления пользователя - Группа: Точки с вкусной полкой. (админ: Пётр)
+[2025-05-02 13:53:39] 854825784 - Добавил пользователя в группу - Пользователь: Доставка UPPETIT (ID: 6691368671), Группа: Точки с вкусной полкой. (админ: Пётр)
+[2025-05-02 13:53:47] 854825784 - Выполнил команду /bot_users - Команда: /bot_users (админ: Пётр)
+[2025-05-02 13:54:10] 854825784 - Выполнил команду /set_task_group - Команда: /set_task_group (админ: Пётр)
+[2025-05-02 13:54:11] 854825784 - Выполнил команду /set_task_group - Команда: select_task_type_daily (админ: Пётр)
+[2025-05-02 13:54:16] 854825784 - Выполнил команду /set_task_group - Команда: set_task_groups_daily (админ: Пётр)
+[2025-05-02 13:54:18] 854825784 - Выполнил команду /set_task_group - Команда: select_group|f3dc48f732 (админ: Пётр)
+[2025-05-02 13:54:20] 854825784 - Выполнил команду /set_task_group - Команда: select_group|ba25027277 (админ: Пётр)
+[2025-05-02 13:54:21] 854825784 - Выполнил команду /set_task_group - Команда: finish_group_selection (админ: Пётр)
+[2025-05-02 13:54:25] 854825784 - Выполнил команду /set_task_group - Команда: /set_task_group (админ: Пётр)
+[2025-05-02 13:54:30] 854825784 - Выполнил команду /set_task_group - Команда: select_task_type_daily (админ: Пётр)
+[2025-05-02 13:54:31] 854825784 - Выполнил команду /set_task_group - Команда: set_task_text_daily (админ: Пётр)
+[2025-05-02 13:54:56] 854825784 - Выполнил команду /set_time - Команда: /set_time (админ: Пётр)
+[2025-05-02 13:54:57] 854825784 - Выполнил команду /set_time - Команда: change_time (админ: Пётр)
+[2025-05-02 13:55:04] СИСТЕМА - Бот был перезапущен
+[2025-05-02 13:55:09] 854825784 - Выполнил команду /show_schedule - Команда: /show_schedule (админ: Пётр)
+[2025-05-02 13:55:30] 854825784 - Выполнил команду /tasks_list - Команда: /tasks_list (админ: Пётр)
+[2025-05-02 13:55:42] 854825784 - Выполнил команду /start - Команда: /start (админ: Пётр)
+[2025-05-02 13:55:42] 854825784 - Запустил бота - Команда /start от Пётр (p_50104)
+[2025-05-02 13:55:49] 854825784 - Выполнил команду /all_logs - Команда: /all_logs (админ: Пётр)
+[2025-05-02 14:05:13] СИСТЕМА - Бот был перезапущен
+[2025-05-02 14:05:13] СИСТЕМА - Бот был перезапущен
+[2025-05-02 14:05:16] 854825784 - Выполнил команду /all_logs - Команда: /all_logs (админ: Пётр)
+[2025-05-02 14:05:32] 854825784 - Выполнил команду /set_time - Команда: /set_time (админ: Пётр)
+[2025-05-02 14:05:36] 854825784 - Выполнил команду /set_time - Команда: change_time (админ: Пётр)
+[2025-05-02 14:05:41] СИСТЕМА - Бот был перезапущен
+[2025-05-02 14:05:46] 854825784 - Выполнил команду /show_schedule - Команда: /show_schedule (админ: Пётр)
+[2025-05-02 14:06:01] 854825784 - Выполнил команду /bot_users - Команда: /bot_users (админ: Пётр)
+[2025-05-02 14:06:21] 854825784 - Выполнил команду /my_id - Команда: /my_id (админ: Пётр)
+[2025-05-02 14:06:27] 854825784 - Выполнил команду /add_user - Команда: /add_user (админ: Пётр)
+[2025-05-02 14:06:27] 854825784 - Запустил процесс добавления пользователя - Команда /add_user (админ: Пётр)
+[2025-05-02 14:06:29] 854825784 - Выполнил команду /add_user - Команда: confirm_add_user (админ: Пётр)
+[2025-05-02 14:06:30] 854825784 - Выполнил команду /add_user - Команда: select_group_5 (админ: Пётр)
+[2025-05-02 14:06:30] 854825784 - Выбрал группу для добавления пользователя - Группа: Группа № 6 (админ: Пётр)
+[2025-05-02 14:06:41] 854825784 - Добавил пользователя в группу - Пользователь: Пётр (ID: 854825784), Группа: Группа № 6 (админ: Пётр)
+[2025-05-02 14:06:46] 854825784 - Выполнил команду /bot_users - Команда: /bot_users (админ: Пётр)
+[2025-05-02 14:07:02] 854825784 - Выполнил команду /show_schedule - Команда: /show_schedule (админ: Пётр)
+[2025-05-02 14:07:46] 854825784 - Выполнил команду /tasks_list - Команда: /tasks_list (админ: Пётр)
+[2025-05-02 14:08:11] 854825784 - Выполнил команду /set_task_group - Команда: /set_task_group (админ: Пётр)
+[2025-05-02 14:08:12] 854825784 - Выполнил команду /set_task_group - Команда: select_task_type_weekly (админ: Пётр)
+[2025-05-02 14:08:23] 854825784 - Выполнил команду /set_task_group - Команда: set_task_text_weekly (админ: Пётр)
+[2025-05-02 14:08:39] 854825784 - Выполнил команду /set_day - Команда: /set_day (админ: Пётр)
+[2025-05-02 14:08:49] СИСТЕМА - Бот был перезапущен
+[2025-05-02 14:08:51] 854825784 - Выполнил команду /show_schedule - Команда: /show_schedule (админ: Пётр)
+[2025-05-02 14:09:37] СИСТЕМА - Бот был перезапущен
+[2025-05-02 14:09:37] СИСТЕМА - Бот был перезапущен
+[2025-05-02 14:09:40] 854825784 - Выполнил команду /show_schedule - Команда: /show_schedule (админ: Пётр)
+[2025-05-02 14:10:17] ОШИБКА в при отправке еженедельной задачи пользователю 6885679242 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 60, in send_weekly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Еженедельная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:10:17] ОШИБКА в при отправке еженедельной задачи пользователю 7767503418 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 60, in send_weekly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Еженедельная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:10:18] ОШИБКА в при отправке еженедельной задачи пользователю 6997091244 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 60, in send_weekly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Еженедельная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:10:18] ОШИБКА в при отправке еженедельной задачи пользователю 6663438753 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 60, in send_weekly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Еженедельная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:10:18] ОШИБКА в при отправке еженедельной задачи пользователю 6802455312 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 60, in send_weekly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Еженедельная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:10:18] ОШИБКА в при отправке еженедельной задачи пользователю 7513265581 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 60, in send_weekly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Еженедельная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:10:18] ОШИБКА в при отправке еженедельной задачи пользователю 7728654036 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 60, in send_weekly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Еженедельная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:11:03] 854825784 - Выполнил команду /tasks_list - Команда: /tasks_list (админ: Пётр)
+[2025-05-02 14:11:23] 854825784 - Выполнил команду /bot_users - Команда: /bot_users (админ: Пётр)
+[2025-05-02 14:12:10] 854825784 - Выполнил команду /all_logs - Команда: /all_logs (админ: Пётр)
+[2025-05-02 14:12:42] 854825784 - Выполнил команду /show_schedule - Команда: /show_schedule (админ: Пётр)
+[2025-05-02 14:13:02] 854825784 - Выполнил команду /set_day - Команда: /set_day (админ: Пётр)
+[2025-05-02 14:13:12] СИСТЕМА - Бот был перезапущен
+[2025-05-02 14:15:01] ОШИБКА в при отправке еженедельной задачи пользователю 6885679242 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 60, in send_weekly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Еженедельная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:15:02] ОШИБКА в при отправке еженедельной задачи пользователю 7767503418 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 60, in send_weekly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Еженедельная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:15:02] ОШИБКА в при отправке еженедельной задачи пользователю 6997091244 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 60, in send_weekly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Еженедельная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:15:02] ОШИБКА в при отправке еженедельной задачи пользователю 6663438753 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 60, in send_weekly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Еженедельная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:15:02] ОШИБКА в при отправке еженедельной задачи пользователю 6802455312 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 60, in send_weekly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Еженедельная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:15:02] ОШИБКА в при отправке еженедельной задачи пользователю 7513265581 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 60, in send_weekly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Еженедельная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:15:02] ОШИБКА в при отправке еженедельной задачи пользователю 7728654036 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 60, in send_weekly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Еженедельная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:15:34] 854825784 - Выполнил команду /set_day - Команда: /set_day (админ: Пётр)
+[2025-05-02 14:15:48] 854825784 - Выполнил команду /set_day - Команда: /set_day (админ: Пётр)
+[2025-05-02 14:15:53] СИСТЕМА - Бот был перезапущен
+[2025-05-02 14:16:08] СИСТЕМА - Бот был перезапущен
+[2025-05-02 14:16:08] СИСТЕМА - Бот был перезапущен
+[2025-05-02 14:16:13] 854825784 - Выполнил команду /show_schedule - Команда: /show_schedule (админ: Пётр)
+[2025-05-02 14:16:20] 854825784 - Выполнил команду /tasks_list - Команда: /tasks_list (админ: Пётр)
+[2025-05-02 14:16:27] 854825784 - Выполнил команду /clear_all_tasks_list - Команда: /clear_all_tasks_list (админ: Пётр)
+[2025-05-02 14:16:28] 854825784 - Выполнил команду /clear_all_tasks_list - Команда: clear_all_tasks_confirm (админ: Пётр)
+[2025-05-02 14:16:33] 854825784 - Выполнил команду /tasks_list - Команда: /tasks_list (админ: Пётр)
+[2025-05-02 14:17:08] ОШИБКА в при отправке еженедельной задачи пользователю 6885679242 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 60, in send_weekly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Еженедельная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:17:09] ОШИБКА в при отправке еженедельной задачи пользователю 7767503418 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 60, in send_weekly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Еженедельная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:17:09] ОШИБКА в при отправке еженедельной задачи пользователю 6997091244 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 60, in send_weekly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Еженедельная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:17:09] ОШИБКА в при отправке еженедельной задачи пользователю 6663438753 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 60, in send_weekly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Еженедельная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:17:09] ОШИБКА в при отправке еженедельной задачи пользователю 6802455312 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 60, in send_weekly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Еженедельная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:17:09] ОШИБКА в при отправке еженедельной задачи пользователю 7513265581 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 60, in send_weekly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Еженедельная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:17:10] ОШИБКА в при отправке еженедельной задачи пользователю 7728654036 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 60, in send_weekly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Еженедельная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:19:09] 854825784 - Выполнил команду /all_logs - Команда: /all_logs (админ: Пётр)
+[2025-05-02 14:20:51] 854825784 - Выполнил команду /my_id - Команда: /my_id (админ: Пётр)
+[2025-05-02 14:28:12] СИСТЕМА - Бот был перезапущен
+[2025-05-02 14:28:12] СИСТЕМА - Бот был перезапущен
+[2025-05-02 14:28:39] 854825784 - Выполнил команду /set_task_group - Команда: /set_task_group (админ: Пётр)
+[2025-05-02 14:28:41] 854825784 - Выполнил команду /set_task_group - Команда: select_task_type_weekly (админ: Пётр)
+[2025-05-02 14:28:42] 854825784 - Выполнил команду /set_task_group - Команда: set_task_text_weekly (админ: Пётр)
+[2025-05-02 14:29:15] 854825784 - Выполнил команду /set_day - Команда: /set_day (админ: Пётр)
+[2025-05-02 14:29:24] СИСТЕМА - Бот был перезапущен
+[2025-05-02 14:29:38] СИСТЕМА - Бот был перезапущен
+[2025-05-02 14:29:38] СИСТЕМА - Бот был перезапущен
+[2025-05-02 14:29:49] 854825784 - Выполнил команду /all_logs - Команда: /all_logs (админ: Пётр)
+[2025-05-02 14:30:00] 854825784 - Выполнил команду /show_schedule - Команда: /show_schedule (админ: Пётр)
+[2025-05-02 14:31:19] ОШИБКА в при отправке еженедельной задачи пользователю 6885679242 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 60, in send_weekly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Еженедельная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:31:19] ОШИБКА в при отправке еженедельной задачи пользователю 7767503418 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 60, in send_weekly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Еженедельная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:31:19] ОШИБКА в при отправке еженедельной задачи пользователю 6997091244 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 60, in send_weekly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Еженедельная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:31:19] ОШИБКА в при отправке еженедельной задачи пользователю 6663438753 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 60, in send_weekly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Еженедельная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:31:19] ОШИБКА в при отправке еженедельной задачи пользователю 6802455312 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 60, in send_weekly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Еженедельная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:31:19] ОШИБКА в при отправке еженедельной задачи пользователю 7513265581 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 60, in send_weekly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Еженедельная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:31:19] ОШИБКА в при отправке еженедельной задачи пользователю 7728654036 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 60, in send_weekly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Еженедельная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:32:00] 854825784 - Выполнил команду /tasks_list - Команда: /tasks_list (админ: Пётр)
+[2025-05-02 14:32:09] 6691368671 - Выполнил команду /photo_submission - Команда: None (админ: Доставка UPPETIT)
+[2025-05-02 14:32:12] 854825784 - Выполнил команду /photo_submission - Команда: accept_7321_6691368671_7316 (админ: Пётр)
+[2025-05-02 14:32:16] 854825784 - Выполнил команду /tasks_list - Команда: /tasks_list (админ: Пётр)
+[2025-05-02 14:32:23] 854825784 - Выполнил команду /clear_tasks_list - Команда: /clear_tasks_list (админ: Пётр)
+[2025-05-02 14:32:24] 854825784 - Выполнил команду /clear_tasks_list - Команда: clear_tasks_confirm (админ: Пётр)
+[2025-05-02 14:32:28] 854825784 - Выполнил команду /tasks_list - Команда: /tasks_list (админ: Пётр)
+[2025-05-02 14:32:36] 854825784 - Выполнил команду /set_task_group - Команда: /set_task_group (админ: Пётр)
+[2025-05-02 14:32:38] 854825784 - Выполнил команду /set_task_group - Команда: select_task_type_monthly (админ: Пётр)
+[2025-05-02 14:32:40] 854825784 - Выполнил команду /set_task_group - Команда: set_task_text_monthly (админ: Пётр)
+[2025-05-02 14:32:57] 854825784 - Выполнил команду /set_month - Команда: /set_month (админ: Пётр)
+[2025-05-02 14:33:04] СИСТЕМА - Бот был перезапущен
+[2025-05-02 14:33:08] 854825784 - Выполнил команду /show_schedule - Команда: /show_schedule (админ: Пётр)
+[2025-05-02 14:33:14] 854825784 - Выполнил команду /set_group_name - Команда: /set_group_name (админ: Пётр)
+[2025-05-02 14:33:15] 854825784 - Выполнил команду /set_group_name - Команда: confirm_set_group_name (админ: Пётр)
+[2025-05-02 14:33:18] 854825784 - Выполнил команду /set_group_name - Команда: select_group_to_rename|5 (админ: Пётр)
+[2025-05-02 14:33:27] 854825784 - Выполнил команду /show_schedule - Команда: /show_schedule (админ: Пётр)
+[2025-05-02 14:33:46] СИСТЕМА - Бот был перезапущен
+[2025-05-02 14:33:46] СИСТЕМА - Бот был перезапущен
+[2025-05-02 14:35:06] ОШИБКА в при отправке ежемесячной задачи пользователю 7767503418 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 89, in send_monthly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Ежемесячная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:35:06] ОШИБКА в при отправке ежемесячной задачи пользователю 7513265581 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 89, in send_monthly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Ежемесячная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:35:06] ОШИБКА в при отправке ежемесячной задачи пользователю 6921154167 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 89, in send_monthly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Ежемесячная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:35:07] ОШИБКА в при отправке ежемесячной задачи пользователю 7976143281 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 89, in send_monthly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Ежемесячная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:35:07] ОШИБКА в при отправке ежемесячной задачи пользователю 6835324617 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 89, in send_monthly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Ежемесячная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:35:07] ОШИБКА в при отправке ежемесячной задачи пользователю 5766022670 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 89, in send_monthly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Ежемесячная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:35:07] ОШИБКА в при отправке ежемесячной задачи пользователю 5837809086 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 89, in send_monthly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Ежемесячная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:35:07] ОШИБКА в при отправке ежемесячной задачи пользователю 6407412450 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 89, in send_monthly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Ежемесячная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:35:07] ОШИБКА в при отправке ежемесячной задачи пользователю 5892356945 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 89, in send_monthly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Ежемесячная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:35:07] ОШИБКА в при отправке ежемесячной задачи пользователю 6881912887 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 89, in send_monthly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Ежемесячная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:35:07] ОШИБКА в при отправке ежемесячной задачи пользователю 6784100812 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 89, in send_monthly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Ежемесячная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:35:07] ОШИБКА в при отправке ежемесячной задачи пользователю 5594387545 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 89, in send_monthly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Ежемесячная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:35:07] ОШИБКА в при отправке ежемесячной задачи пользователю 6885679242 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 89, in send_monthly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Ежемесячная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:35:08] ОШИБКА в при отправке ежемесячной задачи пользователю 8111875232 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 89, in send_monthly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Ежемесячная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:35:08] ОШИБКА в при отправке ежемесячной задачи пользователю 7924656411 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 89, in send_monthly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Ежемесячная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:35:08] ОШИБКА в при отправке ежемесячной задачи пользователю 7813647980 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 89, in send_monthly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Ежемесячная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:35:08] ОШИБКА в при отправке ежемесячной задачи пользователю 7002052320 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 89, in send_monthly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Ежемесячная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:35:08] ОШИБКА в при отправке ежемесячной задачи пользователю 6997091244 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 89, in send_monthly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Ежемесячная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:35:08] ОШИБКА в при отправке ежемесячной задачи пользователю 7337149118 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 89, in send_monthly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Ежемесячная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:35:08] ОШИБКА в при отправке ежемесячной задачи пользователю 7402596646 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 89, in send_monthly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Ежемесячная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:35:08] ОШИБКА в при отправке ежемесячной задачи пользователю 7155127106 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 89, in send_monthly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Ежемесячная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:35:09] ОШИБКА в при отправке ежемесячной задачи пользователю 7688877305 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 89, in send_monthly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Ежемесячная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:35:09] ОШИБКА в при отправке ежемесячной задачи пользователю 6310782529 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 89, in send_monthly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Ежемесячная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:35:09] ОШИБКА в при отправке ежемесячной задачи пользователю 7204069526 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 89, in send_monthly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Ежемесячная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:35:10] ОШИБКА в при отправке ежемесячной задачи пользователю 7404436505 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 89, in send_monthly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Ежемесячная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:35:10] ОШИБКА в при отправке ежемесячной задачи пользователю 6802455312 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 89, in send_monthly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Ежемесячная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:35:10] ОШИБКА в при отправке ежемесячной задачи пользователю 5334735477 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 89, in send_monthly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Ежемесячная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:35:10] ОШИБКА в при отправке ежемесячной задачи пользователю 6591425034 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 89, in send_monthly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Ежемесячная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:35:10] ОШИБКА в при отправке ежемесячной задачи пользователю 7371163196 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 89, in send_monthly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Ежемесячная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:35:10] ОШИБКА в при отправке ежемесячной задачи пользователю 6827347184 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 89, in send_monthly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Ежемесячная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:35:11] ОШИБКА в при отправке ежемесячной задачи пользователю 7181711563 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 89, in send_monthly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Ежемесячная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:35:11] ОШИБКА в при отправке ежемесячной задачи пользователю 7300925258 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 89, in send_monthly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Ежемесячная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:35:11] ОШИБКА в при отправке ежемесячной задачи пользователю 6663438753 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 89, in send_monthly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Ежемесячная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:35:11] ОШИБКА в при отправке ежемесячной задачи пользователю 7728654036 - Тип: ApiTelegramException, Сообщение: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+Трассировка:
+Traceback (most recent call last):
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/restart_scheduler.py", line 89, in send_monthly_tasks
+    msg = bot.send_message(user_id, f"📌 <b>Ежемесячная задача:</b>\n{task_text}", parse_mode="HTML")
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/petrpopov/Documents/PycharmProjects/pythonProjects/UPPETIT_Task_Bot/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+[2025-05-02 14:35:20] 6691368671 - Выполнил команду /photo_submission - Команда: None (админ: Доставка UPPETIT)
+[2025-05-02 14:35:27] 854825784 - Выполнил команду /photo_submission - Команда: accept_7352_6691368671_7350 (админ: Пётр)
+[2025-05-02 14:35:34] 854825784 - Выполнил команду /tasks_list - Команда: /tasks_list (админ: Пётр)

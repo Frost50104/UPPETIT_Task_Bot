@@ -44,14 +44,23 @@ def restart_scheduler(bot):
 
 # === Еженедельные задачи по группам ===
 def send_weekly_tasks(bot):
+    # Словарь для отслеживания отправленных задач пользователям
+    sent_tasks = {}
+
     for group_name, performers in config.performers_by_group.items():
         task_text = config.weekly_tasks.get(group_name)
         if not task_text:
             continue
         for user_id in performers:
+            # Проверяем, получал ли пользователь уже эту задачу
+            if user_id in sent_tasks and sent_tasks[user_id] == task_text:
+                continue
+
             try:
                 msg = bot.send_message(user_id, f"📌 <b>Еженедельная задача:</b>\n{task_text}", parse_mode="HTML")
                 assign_task(user_id, task_text, msg.message_id)
+                # Отмечаем, что пользователь получил эту задачу
+                sent_tasks[user_id] = task_text
             except Exception as e:
                 error_msg = f"⚠ Ошибка при отправке еженедельной задачи пользователю {user_id}: {e}"
                 print(error_msg)
@@ -64,14 +73,23 @@ def check_and_send_monthly(bot, target_day):
         send_monthly_tasks(bot)
 
 def send_monthly_tasks(bot):
+    # Словарь для отслеживания отправленных задач пользователям
+    sent_tasks = {}
+
     for group_name, performers in config.performers_by_group.items():
         task_text = config.monthly_tasks.get(group_name)
         if not task_text:
             continue
         for user_id in performers:
+            # Проверяем, получал ли пользователь уже эту задачу
+            if user_id in sent_tasks and sent_tasks[user_id] == task_text:
+                continue
+
             try:
                 msg = bot.send_message(user_id, f"📌 <b>Ежемесячная задача:</b>\n{task_text}", parse_mode="HTML")
                 assign_task(user_id, task_text, msg.message_id)
+                # Отмечаем, что пользователь получил эту задачу
+                sent_tasks[user_id] = task_text
             except Exception as e:
                 error_msg = f"⚠ Ошибка при отправке ежемесячной задачи пользователю {user_id}: {e}"
                 print(error_msg)

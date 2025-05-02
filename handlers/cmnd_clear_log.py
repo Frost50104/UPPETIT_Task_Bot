@@ -1,7 +1,8 @@
 import os
 from telebot.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
+from logger import ALL_LOGS_FILE
 
-LOG_FILE = "task_log.txt"
+LOG_FILE = ALL_LOGS_FILE
 
 def handle_cmnd_clear_log(bot, is_admin):
     @bot.message_handler(commands=["clear_log"])
