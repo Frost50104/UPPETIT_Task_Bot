@@ -64,8 +64,15 @@ def handle_cmnd_planning(bot, is_admin, task_data):
                         name = cached.get("first_name") or f"ID:{uid}"
                         recipients.append(name)
 
+                repeat = task.get('repeat', 'none')
+                rep_label = {
+                    'none': 'Однократно',
+                    'daily': 'Ежедневно',
+                    'weekly': 'Еженедельно',
+                    'monthly': 'Ежемесячно'
+                }.get(repeat, 'Однократно')
                 lines.append(
-                    f"<b>{i}. {task['text']}</b>\n🕒 {task['date']} {task['time']}\n👥 {', '.join(recipients)}"
+                    f"<b>{i}. {task['text']}</b>\n🕒 {task['date']} {task['time']} • 🔁 {rep_label}\n👥 {', '.join(recipients)}"
                 )
             text = "\n\n".join(lines)
 
@@ -106,8 +113,52 @@ def handle_cmnd_planning(bot, is_admin, task_data):
             bot.send_message(cid, "⚠ Неверный формат. Повторите ввод: дд.мм чч:мм")
             return
         task_data[cid]["date"], task_data[cid]["time"] = parsed
-        task_data[cid]["state"] = "choosing_type"
+        # По умолчанию — без повторения
+        task_data[cid]["repeat"] = task_data[cid].get("repeat", "none")
+        task_data[cid]["state"] = "choosing_repeat"
 
+        keyboard = InlineKeyboardMarkup()
+        keyboard.add(
+            InlineKeyboardButton("❌ Однократно", callback_data="set_repeat|none"),
+            InlineKeyboardButton("🔁 Ежедневно", callback_data="set_repeat|daily")
+        )
+        keyboard.add(
+            InlineKeyboardButton("📅 Еженедельно", callback_data="set_repeat|weekly"),
+            InlineKeyboardButton("📆 Ежемесячно", callback_data="set_repeat|monthly")
+        )
+        keyboard.add(InlineKeyboardButton("🔙 Отмена", callback_data="cancel_planning_task"))
+        bot.send_message(cid, "Выберите режим повторения:", reply_markup=keyboard)
+
+    @bot.callback_query_handler(func=lambda call: call.data.startswith("set_repeat|"))
+    def set_repeat(call):
+        cid = call.message.chat.id
+        _, value = call.data.split("|")
+        if value not in ["none", "daily", "weekly", "monthly"]:
+            value = "none"
+        prev_state = task_data.get(cid, {}).get("state")
+        task_data.setdefault(cid, {})
+        task_data[cid]["repeat"] = value
+
+        # Убираем инлайн-кнопки выбора режима повторения из сообщения
+        try:
+            bot.edit_message_reply_markup(cid, call.message.message_id, reply_markup=None)
+        except Exception:
+            pass
+
+        # Если редактируем только повторение — сохранение сразу
+        if prev_state == "editing_repeat" and "edit_index" in task_data[cid]:
+            tasks = load_planned_tasks()
+            index = task_data[cid]["edit_index"]
+            if 0 <= index < len(tasks):
+                tasks[index]["repeat"] = value
+                save_planned_tasks(tasks)
+            task_data.pop(cid, None)
+            bot.send_message(cid, "✅ Режим повторения обновлён.")
+            show_tasks(cid)
+            return
+
+        # Иначе продолжаем создание и выбираем получателей
+        task_data[cid]["state"] = "choosing_type"
         keyboard = InlineKeyboardMarkup()
         keyboard.add(
             InlineKeyboardButton("👥 Группам", callback_data="planning_to_groups"),
@@ -240,6 +291,7 @@ def handle_cmnd_planning(bot, is_admin, task_data):
             task["text"] = d.get("text", task["text"])
             task["date"] = d.get("date", task["date"])
             task["time"] = d.get("time", task["time"])
+            task["repeat"] = d.get("repeat", task.get("repeat", "none"))
 
             tasks[index] = task
             save_planned_tasks(tasks)
@@ -255,6 +307,7 @@ def handle_cmnd_planning(bot, is_admin, task_data):
             "text": d["text"],
             "date": d["date"],
             "time": d["time"],
+            "repeat": d.get("repeat", "none"),
             "groups": d["recipients"] if d["recipient_type"] == "groups" else [],
             "users": d["recipients"] if d["recipient_type"] == "users" else []
         }
@@ -343,6 +396,7 @@ def handle_cmnd_planning(bot, is_admin, task_data):
         keyboard.add(
             InlineKeyboardButton("✏ Текст", callback_data="edit_field|text"),
             InlineKeyboardButton("📅 Дата и время", callback_data="edit_field|datetime"),
+            InlineKeyboardButton("🔁 Повторение", callback_data="edit_field|repeat"),
             InlineKeyboardButton("👥 Получатели", callback_data="edit_field|recipients")
         )
         keyboard.add(InlineKeyboardButton("🔙 Отмена", callback_data="cancel_planning_task"))
@@ -376,6 +430,7 @@ def handle_cmnd_planning(bot, is_admin, task_data):
             task_data[cid]["text"] = task["text"]
             task_data[cid]["date"] = task["date"]
             task_data[cid]["time"] = task["time"]
+            task_data[cid]["repeat"] = task.get("repeat", "none")
             task_data[cid]["state"] = "choosing_type"
 
             keyboard = InlineKeyboardMarkup()
@@ -384,6 +439,21 @@ def handle_cmnd_planning(bot, is_admin, task_data):
                 InlineKeyboardButton("👤 Сотрудникам", callback_data="planning_to_users")
             )
             bot.send_message(cid, "Кому отправить задачу?", reply_markup=keyboard)
+        elif field == "repeat":
+            bot.edit_message_reply_markup(cid, call.message.message_id, reply_markup=None)
+            task_data[cid]["state"] = "editing_repeat"
+
+            keyboard = InlineKeyboardMarkup()
+            keyboard.add(
+                InlineKeyboardButton("❌ Однократно", callback_data="set_repeat|none"),
+                InlineKeyboardButton("🔁 Ежедневно", callback_data="set_repeat|daily")
+            )
+            keyboard.add(
+                InlineKeyboardButton("📅 Еженедельно", callback_data="set_repeat|weekly"),
+                InlineKeyboardButton("📆 Ежемесячно", callback_data="set_repeat|monthly")
+            )
+            keyboard.add(InlineKeyboardButton("🔙 Отмена", callback_data="cancel_planning_task"))
+            bot.send_message(cid, "Выберите режим повторения:", reply_markup=keyboard)
 
     @bot.message_handler(func=lambda m: task_data.get(m.chat.id, {}).get("state") == "editing_text")
     def save_new_text(message):

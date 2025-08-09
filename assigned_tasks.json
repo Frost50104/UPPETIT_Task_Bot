@@ -36,6 +36,34 @@
       "message_id": 7349,
       "assigned_at": "2025-05-02T14:35:06.498732",
       "control_msg_id": null
+    },
+    {
+      "task_text": "Тестовая задача 01",
+      "status": "выполнена",
+      "message_id": 7385,
+      "assigned_at": "2025-08-08T15:53:05.243649",
+      "control_msg_id": 7387
+    },
+    {
+      "task_text": "Тест 02",
+      "status": "не выполнена",
+      "message_id": 7406,
+      "assigned_at": "2025-08-08T16:15:51.208955",
+      "control_msg_id": null
+    },
+    {
+      "task_text": "Тест 03",
+      "status": "не выполнена",
+      "message_id": 7432,
+      "assigned_at": "2025-08-09T15:10:17.308890",
+      "control_msg_id": null
+    },
+    {
+      "task_text": "Тест 03",
+      "status": "не выполнена",
+      "message_id": 7443,
+      "assigned_at": "2025-08-09T15:11:17.460553",
+      "control_msg_id": null
     }
   ]
 }
