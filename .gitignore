@@ -1,5 +1,7 @@
 config.py
 
+all_logs.txt
+
 user_cache.json
 
 # Игнорирование системного файла macOS
