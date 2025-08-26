@@ -45,9 +45,6 @@ from logger import log_action, log_error, log_bot_restart
 
 
 
-# Создание бота
-bot = telebot.TeleBot(config.TOKEN)
-
 # ========= Функция экранирования MarkdownV2 =========
 def escape_markdown_v2(text):
     """Экранирует специальные символы для MarkdownV2"""
@@ -97,21 +94,24 @@ decorate_handler(handle_cmnd_planning, "planning")(bot, is_admin, task_data)
 
 # ========= Запуск бота =========
 if __name__ == "__main__":
-    print("✅ Бот запущен!")
-    # Логируем перезапуск бота
-    log_bot_restart()
+    import time
 
-    try:
-        # Запускаем бота с обработкой ошибок
-        bot.polling(none_stop=True)
-    except Exception as e:
-        # Логируем ошибку
-        log_error(e, "при работе бота")
-        print(f"❌ Ошибка при работе бота: {e}")
-        # Пробуем перезапустить бота
+    backoff = 5
+    max_backoff = 60
+
+    while True:
+        print("✅ Бот запускается (polling)...")
+        # Логируем перезапуск бота один раз перед началом очередной сессии polling
+        log_bot_restart()
         try:
-            log_bot_restart()
-            bot.polling(none_stop=True)
-        except Exception as restart_error:
-            log_error(restart_error, "при попытке перезапуска бота")
-            print(f"❌ Не удалось перезапустить бота: {restart_error}")
+            # Более длинный long polling, чтобы уменьшить вероятность ReadTimeout
+            bot.polling(none_stop=True, interval=0, timeout=20, long_polling_timeout=90)
+            # Если polling завершился без исключения (например, корректная остановка), выходим из цикла
+            break
+        except Exception as e:
+            # Логируем ошибку и делаем паузу с экспоненциальной задержкой
+            log_error(e, "при работе бота")
+            print(f"❌ Ошибка при работе бота: {e}. Повтор через {backoff} сек.")
+            time.sleep(backoff)
+            backoff = min(backoff * 2, max_backoff)
+            continue
