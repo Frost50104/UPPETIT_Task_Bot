@@ -7,6 +7,31 @@ from telebot.types import Message, CallbackQuery
 # File to store all logs
 ALL_LOGS_FILE = "all_logs.txt"
 
+# Simple in-memory dedup cache: message -> last timestamp (seconds)
+_recent_logs = {}
+_DEDUP_WINDOW_SECONDS = 2
+
+
+def _write_log_line(line: str):
+    """Write line to ALL_LOGS_FILE with basic de-duplication within short time window."""
+    from time import time
+    now = int(time())
+    key = line.strip()  # full line as key
+    last = _recent_logs.get(key)
+    if last is not None and (now - last) <= _DEDUP_WINDOW_SECONDS:
+        # Suppress duplicate
+        return
+    _recent_logs[key] = now
+    # Shrink cache occasionally
+    if len(_recent_logs) > 1000:
+        # remove entries older than window*5
+        cutoff = now - (_DEDUP_WINDOW_SECONDS * 5)
+        for k, v in list(_recent_logs.items()):
+            if v < cutoff:
+                _recent_logs.pop(k, None)
+    with open(ALL_LOGS_FILE, "a", encoding="utf-8") as f:
+        f.write(line)
+
 def log_action(user_id, action, details=None, user_cache=None, admin_name=None):
     """
     Log any bot action to the all_logs.txt file
@@ -46,9 +71,8 @@ def log_action(user_id, action, details=None, user_cache=None, admin_name=None):
     # Create log line
     log_line = f"[{timestamp}] {display_name} - {action}{details_str}{admin_info}\n"
 
-    # Write to log file
-    with open(ALL_LOGS_FILE, "a", encoding="utf-8") as f:
-        f.write(log_line)
+    # Write to log file with dedup
+    _write_log_line(log_line)
 
 def log_command(action_description):
     """
@@ -132,9 +156,8 @@ def log_error(error, context=None):
     log_line = f"[{timestamp}] ОШИБКА{context_str} - Тип: {error_type}, Сообщение: {error_message}\n"
     log_line += f"Трассировка:\n{error_traceback}\n"
 
-    # Write to log file
-    with open(ALL_LOGS_FILE, "a", encoding="utf-8") as f:
-        f.write(log_line)
+    # Write to log file with dedup
+    _write_log_line(log_line)
 
 def log_bot_restart():
     """
@@ -145,6 +168,5 @@ def log_bot_restart():
     # Create log line
     log_line = f"[{timestamp}] СИСТЕМА - Бот был перезапущен\n"
 
-    # Write to log file
-    with open(ALL_LOGS_FILE, "a", encoding="utf-8") as f:
-        f.write(log_line)
+    # Write to log file with dedup
+    _write_log_line(log_line)
